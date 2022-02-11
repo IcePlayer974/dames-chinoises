@@ -10,8 +10,16 @@ typedef struct{
 
 }pions;
 
-void innitialisation(pions Pbleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
+void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
+    PBleu[0].x = ;
+    PBleu[0].y = ;
+    PBleu[0].id = 'B1';
 
+
+
+
+
+}
 void Affichage(){
     int i;
     for(i=0;i<13;i++){
