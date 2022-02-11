@@ -12,6 +12,11 @@ typedef struct{
 
 void innitialisation(pions Pbleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
 
+void Affichage(){
+    int i;
+    for(i=0;i<13;i++){
+    printf("[]");
+    }
 }
 
 void deplacement_pion(pion_joueur[]){
