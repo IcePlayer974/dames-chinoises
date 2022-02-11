@@ -10,15 +10,148 @@ typedef struct{
 
 }pions;
 
-void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
+void initialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
+void{
+
     PBleu[0].Coord_x = 0;
     PBleu[0].Coord_y = 0;
-    PBleu[0].id[0] = 'B';
-    PBleu[0].id[1] = '1';
+    strcpy(PBleu[0].id, "B1");
 
+    PBleu[1].Coord_x = 0;
+    PBleu[1].Coord_y = 0;
+    strcpy(PBleu[1].id, "B2");
 
+    PBleu[2].Coord_x = 0;
+    PBleu[2].Coord_y = 0;
+    strcpy(PBleu[2].id, "B3");
 
+    PBleu[3].Coord_x = 0;
+    PBleu[3].Coord_y = 0;
+    strcpy(PBleu[3].id, "B4");
 
+    PBleu[4].Coord_x = 0;
+    PBleu[4].Coord_y = 0;
+    strcpy(PBleu[4].id, "B5");
+
+    PBleu[5].Coord_x = 0;
+    PBleu[5].Coord_y = 0;
+    strcpy(PBleu[5].id, "B6");
+
+    PBleu[6].Coord_x = 0;
+    PBleu[6].Coord_y = 0;
+    strcpy(PBleu[6].id, "B7");
+
+    PBleu[7].Coord_x = 0;
+    PBleu[7].Coord_y = 0;
+    strcpy(PBleu[7].id, "B8");
+
+    PBleu[8].Coord_x = 0;
+    PBleu[8].Coord_y = 0;
+    strcpy(PBleu[8].id, "B9");
+
+    PBleu[9].Coord_x = 0;
+    PBleu[9].Coord_y = 0;
+    strcpy(PBleu[9].id, "B10");
+     }
+
+void{
+
+    PVert[0].Coord_x = 0;
+    PVert[0].Coord_y = 0;
+    strcpy(PVErt[0].id, "V1");
+
+    PVert[1].Coord_x = 0;
+    PVert[1].Coord_y = 0;
+    strcpy(PVert[1].id, "V2");
+
+    PVert[2].Coord_x = 0;
+    PVert[2].Coord_y = 0;
+    strcpy(PVert[2].id, "V3");
+
+    PVert[3].Coord_x = 0;
+    PVert[3].Coord_y = 0;
+    strcpy(PVert[3].id, "V4");
+
+    PVert[4].Coord_x = 0;
+    PVert[4].Coord_y = 0;
+    strcpy(PVert[4].id, "V5");
+
+    PVert[5].Coord_x = 0;
+    PVert[5].Coord_y = 0;
+    strcpy(PVert[5].id, "V6");
+
+    PVert[6].Coord_x = 0;
+    PVert[6].Coord_y = 0;
+    strcpy(PVert[6].id, "V7");
+
+    PVert[7].Coord_x = 0;
+    PVert[7].Coord_y = 0;
+    strcpy(PVert[7].id, "V8");
+
+    PVert[8].Coord_x = 0;
+    PVert[8].Coord_y = 0;
+    strcpy(PVert[8].id, "V9");
+
+    PVert[9].Coord_x = 0;
+    PVert[9].Coord_y = 0;
+    strcpy(Pvert[9].id, "V10");
+      }
+
+void{
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R1");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R2");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R3");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R4");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R5");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R6");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R7");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R8");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R9");
+
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 0;
+    strcpy(PRouge[0].id, "R10");
+
+}
+
+    PNoir[0].Coord_x = 0;
+    PNoir[0].Coord_y = 0;
+    strcpy(PNoir[0].id, "N1");
+
+    PBlanc[0].Coord_x = 0;
+    PBlanc[0].Coord_y = 0;
+    strcpy(PBlanc[0].id, "Bc1");
+
+    PJaune[0].Coord_x = 0;
+    PJaune[0].Coord_y = 0;
+    strcpy(PJaune[0].id, "J1");
 
 }
 
