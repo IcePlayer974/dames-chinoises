@@ -10,6 +10,10 @@ typedef struct{
 
 }pions;
 
+void innitialisation(pions Pbleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
+
+}
+
 void deplacement_pion(pion_joueur[]){
 printf("qu'elle pions voulez vous jouer ?");
 }
