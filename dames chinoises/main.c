@@ -20,13 +20,15 @@ void Affichage(){
 }
 
 void deplacement_pion(pion_joueur[]){
-int i;
+int i,j;
 char c[2];
 printf("qu'elle pions voulez vous jouer ?");
 fflush(stdin);
 scanf("%s",&c);
 for(i=0;i<9;i++){
-    if(c==pion_joueur)
+    if(c==pion_joueur.id[i]){
+        j=i;
+    }
 }
 
 }
