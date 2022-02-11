@@ -16,6 +16,10 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBleu[0].id = 'B1';
 
 
+
+
+
+}
 void Affichage(){
     int i;
     for(i=0;i<13;i++){
