@@ -6,12 +6,13 @@
 typedef struct{
     int Coord x;
     int Coord y;
-    char couleur;
-    int numero;
+    char id;
 
 }pions;
 
-void deplacement_pion()
+void deplacement_pion(pion_joueur[]){
+printf("qu'elle pions voulez vous jouer ?");
+}
 
 int main{
 printf("");
