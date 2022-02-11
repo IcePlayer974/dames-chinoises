@@ -6,7 +6,7 @@
 typedef struct{
     int Coord x;
     int Coord y;
-    char id[2];
+    char id[3];
 
 }pions;
 
