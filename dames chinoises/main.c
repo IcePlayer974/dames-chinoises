@@ -30,3 +30,6 @@ int main{
 printf("");
 };
 
+int main(){
+Affichage();
+}
