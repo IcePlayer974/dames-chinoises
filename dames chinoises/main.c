@@ -56,46 +56,46 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
         }
         }
         }
-char choix_pion(pion[]){
-int i,j;
-char c[2];
-printf("qu'elle pions voulez vous jouer ?");
-fflush(stdin);
-scanf("%s",&c);
-for(i=0;i<9;i++){
-    if(c==pion_joueur.id[i]){
-        j=i;
-    }
-}
-return j;
-}
+// char choix_pion(pion[]){
+// int i,j;
+// char c[2];
+// printf("qu'elle pions voulez vous jouer ?");
+// fflush(stdin);
+// scanf("%s",&c);
+// for(i=0;i<9;i++){
+//     if(c==pion_joueur.id[i]){
+//         j=i;
+//     }
+// }
+// return j;
+// }
 
-void deplacement_pion(choix_pion(pion[])){
-int direction,futur_poition_pion_x,futur_poition_pion_y;
-printf("vers où voulz vous deplacer le pion ? \n Taper 1 pour aller en haut a gauche \n Taper 2 pour aller en haut a droite \n Taper 3 pour aller en bas a droite \n Taper 4 pour aller en bas a gauche");
-scanf("%i",&direction);
-if(direction==1){
-    pion.x[j]--;
-    pion.y[j]--;
-}
-else if(direction==2){
-    pion.x[j]++;
-    pion.y[j]--;
-}
-else if(direction==3){
-    pion.x[j]++;
-    pion.y[j]++;
-}
-else{
-    pion.x[j]--;
-    pion.y[j]++;
-}
-}
+// void deplacement_pion(choix_pion(pion[])){
+// int direction,futur_poition_pion_x,futur_poition_pion_y;
+// printf("vers oï¿½ voulz vous deplacer le pion ? \n Taper 1 pour aller en haut a gauche \n Taper 2 pour aller en haut a droite \n Taper 3 pour aller en bas a droite \n Taper 4 pour aller en bas a gauche");
+// scanf("%i",&direction);
+// if(direction==1){
+//     pion.x[j]--;
+//     pion.y[j]--;
+// }
+// else if(direction==2){
+//     pion.x[j]++;
+//     pion.y[j]--;
+// }
+// else if(direction==3){
+//     pion.x[j]++;
+//     pion.y[j]++;
+// }
+// else{
+//     pion.x[j]--;
+//     pion.y[j]++;
+// }
+// }
 
-void regle_deplacement()
-int main{
-printf("");
-};
+// void regle_deplacement()
+// int main{
+// printf("");
+// };
 
 int main(){
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10];
