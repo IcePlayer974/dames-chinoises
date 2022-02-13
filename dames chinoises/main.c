@@ -9,7 +9,7 @@ typedef struct{
     char id[3];
 
 }pions;
-
+// peut etre fair m'initialisiation par le bia d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
     PBleu[0].Coord_x = 0;
     PBleu[0].Coord_y = 0;
@@ -17,8 +17,38 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBleu[0].id[1] = '1';
     PBleu[0].id[2] = ' ';
 
-}
+    PVert[0].Coord_x = 0;
+    PVert[0].Coord_y = 1;
+    PVert[0].id[0] = 'V';
+    PVert[0].id[1] = '1';
+    PVert[0].id[2] = ' ';
 
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 2;
+    PRouge[0].id[0] = 'R';
+    PRouge[0].id[1] = '1';
+    PRouge[0].id[2] = ' ';
+
+    PNoir[0].Coord_x = 0;
+    PNoir[0].Coord_y = 3;
+    PNoir[0].id[0] = 'N';
+    PNoir[0].id[1] = '1';
+    PNoir[0].id[2] = ' ';
+
+    PBlanc[0].Coord_x = 0;
+    PBlanc[0].Coord_y = 4;
+    PBlanc[0].id[0] = 'B';
+    PBlanc[0].id[1] = 'l';
+    PBlanc[0].id[2] = ' ';
+
+    PJaune[0].Coord_x = 0;
+    PJaune[0].Coord_y = 5;
+    PJaune[0].id[0] = 'J';
+    PJaune[0].id[1] = '1';
+    PJaune[0].id[2] = ' ';
+
+}
+//on lit les coordonnées de chaque pions pour bien les placer, aucune erreur possible car ce programme ne touche pas a leur emplacement, on ne le lit seulement
 char Affichage_de_pion(int x, int y,pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
     int i=0;
     char defaut;
@@ -51,11 +81,20 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     int i,k;
     for (k=0;k<17;k++){
         printf("\n\n");
+        if(k%2==0){
             for(i=0;i<13;i++){
-        printf("  [%c]",Affichage_de_pion(i,k,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+        printf("   [%c]",Affichage_de_pion(i,k,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+            }
+        }
+            else{
+        for(i=0;i<13;i++){
+        printf("[%c]   ",Affichage_de_pion(i,k,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+            }
+
         }
         }
         }
+        
 // char choix_pion(pion[]){
 // int i,j;
 // char c[2];
