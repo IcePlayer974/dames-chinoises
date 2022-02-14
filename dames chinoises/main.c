@@ -11,37 +11,37 @@ typedef struct{
 }pions;
 // peut etre fair m'initialisiation par le bia d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
-    PBleu[0].Coord_x = 0;
+    PBleu[0].Coord_x = 6;
     PBleu[0].Coord_y = 0;
     PBleu[0].id[0] = 'B';
     PBleu[0].id[1] = '1';
     PBleu[0].id[2] = ' ';
 
-    PVert[0].Coord_x = 0;
+    PVert[0].Coord_x = 6;
     PVert[0].Coord_y = 1;
     PVert[0].id[0] = 'V';
     PVert[0].id[1] = '1';
     PVert[0].id[2] = ' ';
 
-    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_x = 6;
     PRouge[0].Coord_y = 2;
     PRouge[0].id[0] = 'R';
     PRouge[0].id[1] = '1';
     PRouge[0].id[2] = ' ';
 
-    PNoir[0].Coord_x = 0;
+    PNoir[0].Coord_x = 6;
     PNoir[0].Coord_y = 3;
     PNoir[0].id[0] = 'N';
     PNoir[0].id[1] = '1';
     PNoir[0].id[2] = ' ';
 
-    PBlanc[0].Coord_x = 0;
+    PBlanc[0].Coord_x = 6;
     PBlanc[0].Coord_y = 4;
     PBlanc[0].id[0] = 'B';
     PBlanc[0].id[1] = 'l';
     PBlanc[0].id[2] = ' ';
 
-    PJaune[0].Coord_x = 0;
+    PJaune[0].Coord_x = 6;
     PJaune[0].Coord_y = 5;
     PJaune[0].id[0] = 'J';
     PJaune[0].id[1] = '1';
@@ -79,21 +79,143 @@ return defaut;
 
 void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
     int i,k;
-    for (k=0;k<17;k++){
-        printf("\n\n");
-        if(k%2==0){
-            for(i=0;i<13;i++){
-        printf("   [%c]",Affichage_de_pion(i,k,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
-            }
-        }
-            else{
-        for(i=0;i<13;i++){
-        printf("[%c]   ",Affichage_de_pion(i,k,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
-            }
+    //couche 0
+    printf("\n");
+    for(i=0;i<6;i++){
+        printf("      ");
+    }
+    printf("[%c] \n   ", Affichage_de_pion(6,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    //le décalage est important a coté du \n
+    //chouche 1
+    for(i=0;i<5;i++){
+        printf("      ");
+    }
+    for(i=5;i<7;i++){
+    printf("[%c]   ", Affichage_de_pion(i,1,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //chouche 2
 
-        }
-        }
-        }
+    for(i=0;i<5;i++){
+        printf("      ");
+    }
+    for(i=5;i<8;i++){
+    printf("[%c]   ", Affichage_de_pion(i,2,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n   ");
+    //chouche 3
+    for(i=0;i<4;i++){
+        printf("      ");
+    }
+    for(i=4;i<8;i++){
+    printf("[%c]   ", Affichage_de_pion(i,3,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //chouche 4
+    for(i=0;i<13;i++){
+    printf("[%c]   ", Affichage_de_pion(i,4,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n   ");
+    //chouche 5
+    for(i=0;i<12;i++){
+    printf("[%c]   ", Affichage_de_pion(i,5,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //chouche 6
+    for(i=0;i<1;i++){
+        printf("      ");
+    }
+    for(i=1;i<12;i++){
+    printf("[%c]   ", Affichage_de_pion(i,6,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n   ");
+    //chouche 7
+    for(i=0;i<1;i++){
+        printf("      ");
+    }
+    for(i=1;i<11;i++){
+    printf("[%c]   ", Affichage_de_pion(i,7,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //chouche 8
+    for(i=0;i<2;i++){
+        printf("      ");
+    }
+    for(i=1;i<10;i++){
+    printf("[%c]   ", Affichage_de_pion(i,8,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n   ");
+    //chouche 9
+    for(i=0;i<1;i++){
+        printf("      ");
+    }
+    for(i=1;i<11;i++){
+    printf("[%c]   ", Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //chouche 10
+    for(i=0;i<1;i++){
+        printf("      ");
+    }
+    for(i=1;i<12;i++){
+    printf("[%c]   ", Affichage_de_pion(i,10,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n   ");
+    //chouche 11
+    for(i=0;i<12;i++){
+    printf("[%c]   ", Affichage_de_pion(i,11,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //chouche 12
+ 
+    for(i=0;i<13;i++){
+    printf("[%c]   ", Affichage_de_pion(i,12,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n   ");
+    //chouche 13
+    for(i=0;i<4;i++){
+        printf("      ");
+    }
+    for(i=4;i<8;i++){
+    printf("[%c]   ", Affichage_de_pion(i,13,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //chouche 14
+    for(i=0;i<5;i++){
+        printf("      ");
+    }
+    for(i=5;i<8;i++){
+    printf("[%c]   ", Affichage_de_pion(i,14,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n   ");
+    //chouche 15
+    for(i=0;i<5;i++){
+        printf("      ");
+    }
+    for(i=5;i<7;i++){
+    printf("[%c]   ", Affichage_de_pion(i,15,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    }
+    printf("\n");
+    //couche 16
+    for(i=0;i<6;i++){
+        printf("      ");
+    }
+    printf("[%c] \n   ", Affichage_de_pion(6,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    // for (k=0;k<17;k++){
+    //     printf("\n\n");
+    //     if(k%2==0){
+    //         for(i=0;i<13;i++){
+    //     printf("[%c]   ",Affichage_de_pion(i,k,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    //         }
+    //     }
+    //         else{
+    //     for(i=0;i<13;i++){
+    //     printf("   [%c]",Affichage_de_pion(i,k,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    //         }
+
+    //     }
+    // }
+ }
         
 // char choix_pion(pion[]){
 // int i,j;
