@@ -12,40 +12,40 @@ typedef struct{
 }pions;
 // peut etre faire m'initialisiation par le biai d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
-    PBleu[0].Coord_x = 6;
-    PBleu[0].Coord_y = 5;
+    PBleu[0].Coord_x = 13;
+    PBleu[0].Coord_y = 0;
     PBleu[0].id[0] = 'B';
     PBleu[0].id[1] = '1';
     PBleu[0].id[2] = ' ';
 
-    PVert[0].Coord_x = 6;
-    PVert[0].Coord_y = 6;
+    PVert[0].Coord_x = 0;
+    PVert[0].Coord_y = 4;
     PVert[0].id[0] = 'V';
     PVert[0].id[1] = '1';
     PVert[0].id[2] = ' ';
     //PVert[1].Coord_x=1;
 //printf("[%i]",PVert[0].Coord_x);
 
-    PRouge[0].Coord_x = 6;
-    PRouge[0].Coord_y = 7;
+    PRouge[0].Coord_x = 0;
+    PRouge[0].Coord_y = 12;
     PRouge[0].id[0] = 'R';
     PRouge[0].id[1] = '1';
     PRouge[0].id[2] = ' ';
 
-    PNoir[0].Coord_x = 6;
-    PNoir[0].Coord_y = 8;
+    PNoir[0].Coord_x = 13;
+    PNoir[0].Coord_y = 16;
     PNoir[0].id[0] = 'N';
     PNoir[0].id[1] = '1';
     PNoir[0].id[2] = ' ';
 
-    PBlanc[0].Coord_x = 6;
-    PBlanc[0].Coord_y = 9;
+    PBlanc[0].Coord_x = 24;
+    PBlanc[0].Coord_y = 12;
     PBlanc[0].id[0] = 'B';
     PBlanc[0].id[1] = 'l';
     PBlanc[0].id[2] = ' ';
 
-    PJaune[0].Coord_x = 6;
-    PJaune[0].Coord_y = 10;
+    PJaune[0].Coord_x = 24;
+    PJaune[0].Coord_y = 4;
     PJaune[0].id[0] = 'J';
     PJaune[0].id[1] = '1';
     PJaune[0].id[2] = ' ';
@@ -229,13 +229,13 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<6;i++){
         printf("      ");
     }
-    printf("[%c] \n   ", Affichage_de_pion(6,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
-    //le décalage est important a coté du \n
+    printf("[%c] \n   ", Affichage_de_pion(13,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    // le décalage est important a coté du \n
     //chouche 1
     for(i=0;i<5;i++){
         printf("      ");
     }
-    for(i=5;i<7;i++){
+    for(i=12;i<15;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,1,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
@@ -244,7 +244,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<5;i++){
         printf("      ");
     }
-    for(i=5;i<8;i++){
+    for(i=11;i<16;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,2,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n   ");
@@ -252,17 +252,17 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<4;i++){
         printf("      ");
     }
-    for(i=4;i<8;i++){
+    for(i=10;i<17;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,3,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
     //chouche 4
-    for(i=0;i<13;i++){
+    for(i=0;i<26;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,4,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n   ");
     //chouche 5
-    for(i=0;i<12;i++){
+    for(i=1;i<24;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,5,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
@@ -270,7 +270,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<1;i++){
         printf("      ");
     }
-    for(i=1;i<12;i++){
+    for(i=2;i<23;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,6,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n   ");
@@ -278,7 +278,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<1;i++){
         printf("      ");
     }
-    for(i=1;i<11;i++){
+    for(i=3;i<22;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,7,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
@@ -286,7 +286,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<2;i++){
         printf("      ");
     }
-    for(i=1;i<10;i++){
+    for(i=4;i<21;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,8,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n   ");
@@ -294,7 +294,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<1;i++){
         printf("      ");
     }
-    for(i=1;i<11;i++){
+    for(i=3;i<22;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
@@ -302,18 +302,18 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<1;i++){
         printf("      ");
     }
-    for(i=1;i<12;i++){
+    for(i=2;i<23;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,10,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n   ");
     //chouche 11
-    for(i=0;i<12;i++){
+    for(i=1;i<24;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,11,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
-    //chouche 12
+    // //chouche 12
  
-    for(i=0;i<13;i++){
+    for(i=0;i<25;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,12,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n   ");
@@ -321,15 +321,15 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<4;i++){
         printf("      ");
     }
-    for(i=4;i<8;i++){
+    for(i=12;i<20;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,13,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
-    //chouche 14
+    // //chouche 14
     for(i=0;i<5;i++){
         printf("      ");
     }
-    for(i=5;i<8;i++){
+    for(i=13;i<19;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,14,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n   ");
@@ -337,7 +337,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<5;i++){
         printf("      ");
     }
-    for(i=5;i<7;i++){
+    for(i=14;i<18;(i=i+2)){
     printf("[%c]   ", Affichage_de_pion(i,15,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
     printf("\n");
@@ -345,7 +345,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     for(i=0;i<6;i++){
         printf("      ");
     }
-    printf("[%c] \n   ", Affichage_de_pion(6,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c] \n   ", Affichage_de_pion(13,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
 }
 
 int main(){
@@ -355,13 +355,13 @@ int main(){
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 // choix_numero_pion();
-initialisation_pion_a_deplacer(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
-deplacement_pion(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
+ initialisation_pion_a_deplacer(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
+ deplacement_pion(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
 
-initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
+ initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
 
-//printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
-//printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);      ||pour debogage
+// //printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
+// //printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);      ||pour debogage
 
-Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune); 
+ Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune); 
 }
