@@ -66,7 +66,7 @@ else if(variable_pr_couleur==1){
     pion_a_deplacer[i].Coord_x=PVert[i].Coord_x;
     pion_a_deplacer[i].Coord_y=PVert[i].Coord_y;
     pion_a_deplacer[i].id[1]=PVert[i].id[1];
-    printf("variable ok \n");
+    //printf("variable ok \n");
     //printf("[%C]",pion_a_deplacer[i].id[1]);
     //printf("[%i]",pion_a_deplacer[i].Coord_x);  pour le debogage
     //printf("[%i]",PVert[i].Coord_x);
