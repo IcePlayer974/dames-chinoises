@@ -188,12 +188,12 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PNoir[3].id[0] = 'N';
     PNoir[3].id[1] = '3';
 
-    PNoir[4].Coord_x = 0;
-    PNoir[4].Coord_y = 12;
+    PNoir[4].Coord_x = 12;
+    PNoir[4].Coord_y = 14;
     PNoir[4].id[0] = 'N';
     PNoir[4].id[1] = '4';
 
-    PNoir[5].Coord_x = 0;
+    PNoir[5].Coord_x = 14;
     PNoir[5].Coord_y = 14;
     PNoir[5].id[0] = 'N';
     PNoir[5].id[1] = '5';
