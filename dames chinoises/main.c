@@ -11,7 +11,6 @@ typedef struct{
 }pions;
 // peut etre faire m'initialisiation par le biai d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
-<<<<<<< HEAD
 
     PBleu[0].Coord_x = 12;
     PBleu[0].Coord_y = 0;
@@ -52,12 +51,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBleu[7].Coord_y = 3;
     PBleu[7].id[0] = 'B';
     PBleu[7].id[1] = '7';
-=======
-    PBleu[0].Coord_x = 12;
-    PBleu[0].Coord_y = 0;
-    PBleu[0].id[0] = 'B';
-    PBleu[0].id[1] = '1';
->>>>>>> c03fd7076ab5cc969b43e91b750a5f54c2a5f20c
 
     PBleu[8].Coord_x = 13;
     PBleu[8].Coord_y = 3;
@@ -74,7 +67,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PVert[0].Coord_x = 24;
     PVert[0].Coord_y = 4;
     PVert[0].id[0] = 'V';
-<<<<<<< HEAD
     PVert[0].id[1] = '0';
 
     PVert[1].Coord_x = 23;
@@ -96,9 +88,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PVert[4].Coord_y = 5;
     PVert[4].id[0] = 'V';
     PVert[4].id[1] = '4';
-=======
-    PVert[0].id[1] = '1';
->>>>>>> c03fd7076ab5cc969b43e91b750a5f54c2a5f20c
 
     PVert[5].Coord_x = 20;
     PVert[5].Coord_y = 4;
@@ -130,7 +119,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PRouge[0].Coord_x = 24;
     PRouge[0].Coord_y = 12;
     PRouge[0].id[0] = 'R';
-<<<<<<< HEAD
     PRouge[0].id[1] = '0';
 
     PRouge[1].Coord_x = 23;
@@ -214,14 +202,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PNoir[6].Coord_y = 13;
     PNoir[6].id[0] = 'N';
     PNoir[6].id[1] = '6';
-=======
-    PRouge[0].id[1] = '1';
-
-    PNoir[0].Coord_x = 12;
-    PNoir[0].Coord_y = 16;
-    PNoir[0].id[0] = 'N';
-    PNoir[0].id[1] = '1';
->>>>>>> c03fd7076ab5cc969b43e91b750a5f54c2a5f20c
 
     PNoir[7].Coord_x = 11;
     PNoir[7].Coord_y = 13;
@@ -242,7 +222,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
 
     PBlanc[0].Coord_x = 0;
     PBlanc[0].Coord_y = 12;
-<<<<<<< HEAD
     PBlanc[0].id[0] = 'A';
     PBlanc[0].id[1] = '0';
 
@@ -260,10 +239,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBlanc[3].Coord_y = 10;
     PBlanc[3].id[0] = 'A';
     PBlanc[3].id[1] = '3';
-=======
-    PBlanc[0].id[0] = 'B';
-    PBlanc[0].id[1] = 'l';
->>>>>>> c03fd7076ab5cc969b43e91b750a5f54c2a5f20c
 
     PBlanc[4].Coord_x = 3;
     PBlanc[4].Coord_y = 11;
@@ -300,7 +275,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PJaune[0].Coord_x = 0;
     PJaune[0].Coord_y = 4;
     PJaune[0].id[0] = 'J';
-<<<<<<< HEAD
     PJaune[0].id[1] = '0';
 
     PJaune[1].Coord_x = 1;
@@ -347,9 +321,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PJaune[9].Coord_y = 4;
     PJaune[9].id[0] = 'J';
     PJaune[9].id[1] = '9';
-=======
-    PJaune[0].id[1] = '1';
->>>>>>> c03fd7076ab5cc969b43e91b750a5f54c2a5f20c
 
 }
 
