@@ -754,7 +754,7 @@ Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
  initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
 
 //printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
-//printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour debogage
+//printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour deboga
 
  Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune); 
 }
