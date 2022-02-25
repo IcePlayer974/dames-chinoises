@@ -11,43 +11,316 @@ typedef struct{
 }pions;
 // peut etre faire m'initialisiation par le biai d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
-    PBleu[0].Coord_x = 13;
+
+    PBleu[0].Coord_x = 12;
     PBleu[0].Coord_y = 0;
     PBleu[0].id[0] = 'B';
-    PBleu[0].id[1] = '1';
-    PBleu[0].id[2] = ' ';
+    PBleu[0].id[1] = '0';
 
-    PVert[0].Coord_x = 0;
+    PBleu[1].Coord_x = 11;
+    PBleu[1].Coord_y = 1;
+    PBleu[1].id[0] = 'B';
+    PBleu[1].id[1] = '1';
+
+    PBleu[2].Coord_x = 13;
+    PBleu[2].Coord_y = 1;
+    PBleu[2].id[0] = 'B';
+    PBleu[2].id[1] = '2';
+
+    PBleu[3].Coord_x = 10;
+    PBleu[3].Coord_y = 2;
+    PBleu[3].id[0] = 'B';
+    PBleu[3].id[1] = '3';
+
+    PBleu[4].Coord_x = 12;
+    PBleu[4].Coord_y = 2;
+    PBleu[4].id[0] = 'B';
+    PBleu[4].id[1] = '4';
+
+    PBleu[5].Coord_x = 14;
+    PBleu[5].Coord_y = 2;
+    PBleu[5].id[0] = 'B';
+    PBleu[5].id[1] = '5';
+
+    PBleu[6].Coord_x = 9;
+    PBleu[6].Coord_y = 3;
+    PBleu[6].id[0] = 'B';
+    PBleu[6].id[1] = '6';
+
+    PBleu[7].Coord_x = 11;
+    PBleu[7].Coord_y = 3;
+    PBleu[7].id[0] = 'B';
+    PBleu[7].id[1] = '7';
+
+    PBleu[8].Coord_x = 13;
+    PBleu[8].Coord_y = 3;
+    PBleu[8].id[0] = 'B';
+    PBleu[8].id[1] = '8';
+
+    PBleu[9].Coord_x = 15;
+    PBleu[9].Coord_y = 3;
+    PBleu[9].id[0] = 'B';
+    PBleu[9].id[1] = '9';
+
+
+
+    PVert[0].Coord_x = 24;
     PVert[0].Coord_y = 4;
     PVert[0].id[0] = 'V';
-    PVert[0].id[1] = '1';
-    PVert[0].id[2] = ' ';
-    //PVert[1].Coord_x=1;
-//printf("[%i]",PVert[0].Coord_x);
+    PVert[0].id[1] = '0';
 
-    PRouge[0].Coord_x = 0;
+    PVert[1].Coord_x = 23;
+    PVert[1].Coord_y = 5;
+    PVert[1].id[0] = 'V';
+    PVert[1].id[1] = '1';
+
+    PVert[2].Coord_x = 22;
+    PVert[2].Coord_y = 4;
+    PVert[2].id[0] = 'V';
+    PVert[2].id[1] = '2';
+
+    PVert[3].Coord_x = 22;
+    PVert[3].Coord_y = 6;
+    PVert[3].id[0] = 'V';
+    PVert[3].id[1] = '3';
+
+    PVert[4].Coord_x = 21;
+    PVert[4].Coord_y = 5;
+    PVert[4].id[0] = 'V';
+    PVert[4].id[1] = '4';
+
+    PVert[5].Coord_x = 20;
+    PVert[5].Coord_y = 4;
+    PVert[5].id[0] = 'V';
+    PVert[5].id[1] = '5';
+
+    PVert[6].Coord_x = 21;
+    PVert[6].Coord_y = 7;
+    PVert[6].id[0] = 'V';
+    PVert[6].id[1] = '6';
+
+    PVert[7].Coord_x = 20;
+    PVert[7].Coord_y = 6;
+    PVert[7].id[0] = 'V';
+    PVert[7].id[1] = '7';
+
+    PVert[8].Coord_x = 19;
+    PVert[8].Coord_y = 5;
+    PVert[8].id[0] = 'V';
+    PVert[8].id[1] = '8';
+
+    PVert[9].Coord_x = 18;
+    PVert[9].Coord_y = 4;
+    PVert[9].id[0] = 'V';
+    PVert[9].id[1] = '9';
+
+
+
+    PRouge[0].Coord_x = 24;
     PRouge[0].Coord_y = 12;
     PRouge[0].id[0] = 'R';
-    PRouge[0].id[1] = '1';
-    PRouge[0].id[2] = ' ';
+    PRouge[0].id[1] = '0';
 
-    PNoir[0].Coord_x = 13;
+    PRouge[1].Coord_x = 23;
+    PRouge[1].Coord_y = 11;
+    PRouge[1].id[0] = 'R';
+    PRouge[1].id[1] = '1';
+
+    PRouge[2].Coord_x = 22;
+    PRouge[2].Coord_y = 12;
+    PRouge[2].id[0] = 'R';
+    PRouge[2].id[1] = '2';
+
+    PRouge[3].Coord_x = 22;
+    PRouge[3].Coord_y = 10;
+    PRouge[3].id[0] = 'R';
+    PRouge[3].id[1] = '3';
+
+    PRouge[4].Coord_x = 21;
+    PRouge[4].Coord_y = 11;
+    PRouge[4].id[0] = 'R';
+    PRouge[4].id[1] = '4';
+
+    PRouge[5].Coord_x = 20;
+    PRouge[5].Coord_y = 12;
+    PRouge[5].id[0] = 'R';
+    PRouge[5].id[1] = '5';
+
+    PRouge[6].Coord_x = 21;
+    PRouge[6].Coord_y = 9;
+    PRouge[6].id[0] = 'R';
+    PRouge[6].id[1] = '6';
+
+    PRouge[7].Coord_x = 20;
+    PRouge[7].Coord_y = 10;
+    PRouge[7].id[0] = 'R';
+    PRouge[7].id[1] = '7';
+
+    PRouge[8].Coord_x = 19;
+    PRouge[8].Coord_y = 11;
+    PRouge[8].id[0] = 'R';
+    PRouge[8].id[1] = '8';
+
+    PRouge[9].Coord_x = 18;
+    PRouge[9].Coord_y = 12;
+    PRouge[9].id[0] = 'R';
+    PRouge[9].id[1] = '9';
+
+
+
+    PNoir[0].Coord_x = 12;
     PNoir[0].Coord_y = 16;
     PNoir[0].id[0] = 'N';
-    PNoir[0].id[1] = '1';
-    PNoir[0].id[2] = ' ';
+    PNoir[0].id[1] = '0';
 
-    PBlanc[0].Coord_x = 24;
+    PNoir[1].Coord_x = 11;
+    PNoir[1].Coord_y = 15;
+    PNoir[1].id[0] = 'N';
+    PNoir[1].id[1] = '1';
+
+    PNoir[2].Coord_x = 13;
+    PNoir[2].Coord_y = 15;
+    PNoir[2].id[0] = 'N';
+    PNoir[2].id[1] = '2';
+
+    PNoir[3].Coord_x = 10;
+    PNoir[3].Coord_y = 14;
+    PNoir[3].id[0] = 'N';
+    PNoir[3].id[1] = '3';
+
+    PNoir[4].Coord_x = 0;
+    PNoir[4].Coord_y = 12;
+    PNoir[4].id[0] = 'N';
+    PNoir[4].id[1] = '4';
+
+    PNoir[5].Coord_x = 0;
+    PNoir[5].Coord_y = 14;
+    PNoir[5].id[0] = 'N';
+    PNoir[5].id[1] = '5';
+
+    PNoir[6].Coord_x = 9;
+    PNoir[6].Coord_y = 13;
+    PNoir[6].id[0] = 'N';
+    PNoir[6].id[1] = '6';
+
+    PNoir[7].Coord_x = 11;
+    PNoir[7].Coord_y = 13;
+    PNoir[7].id[0] = 'N';
+    PNoir[7].id[1] = '7';
+
+    PNoir[8].Coord_x = 13;
+    PNoir[8].Coord_y = 13;
+    PNoir[8].id[0] = 'N';
+    PNoir[8].id[1] = '8';
+
+    PNoir[9].Coord_x = 15;
+    PNoir[9].Coord_y = 13;
+    PNoir[9].id[0] = 'N';
+    PNoir[9].id[1] = '9';
+
+
+
+    PBlanc[0].Coord_x = 0;
     PBlanc[0].Coord_y = 12;
-    PBlanc[0].id[0] = 'B';
-    PBlanc[0].id[1] = 'l';
-    PBlanc[0].id[2] = ' ';
+    PBlanc[0].id[0] = 'A';
+    PBlanc[0].id[1] = '0';
 
-    PJaune[0].Coord_x = 24;
+    PBlanc[1].Coord_x = 1;
+    PBlanc[1].Coord_y = 11;
+    PBlanc[1].id[0] = 'A';
+    PBlanc[1].id[1] = '1';
+
+    PBlanc[2].Coord_x = 2;
+    PBlanc[2].Coord_y = 12;
+    PBlanc[2].id[0] = 'A';
+    PBlanc[2].id[1] = '2';
+
+    PBlanc[3].Coord_x = 2;
+    PBlanc[3].Coord_y = 10;
+    PBlanc[3].id[0] = 'A';
+    PBlanc[3].id[1] = '3';
+
+    PBlanc[4].Coord_x = 3;
+    PBlanc[4].Coord_y = 11;
+    PBlanc[4].id[0] = 'A';
+    PBlanc[4].id[1] = '4';
+
+    PBlanc[5].Coord_x = 4;
+    PBlanc[5].Coord_y = 12;
+    PBlanc[5].id[0] = 'A';
+    PBlanc[5].id[1] = '5';
+
+    PBlanc[6].Coord_x = 3;
+    PBlanc[6].Coord_y = 9;
+    PBlanc[6].id[0] = 'A';
+    PBlanc[6].id[1] = '6';
+
+    PBlanc[7].Coord_x = 4;
+    PBlanc[7].Coord_y = 10;
+    PBlanc[7].id[0] = 'A';
+    PBlanc[7].id[1] = '7';
+
+    PBlanc[8].Coord_x = 5;
+    PBlanc[8].Coord_y = 11;
+    PBlanc[8].id[0] = 'A';
+    PBlanc[8].id[1] = '8';
+
+    PBlanc[9].Coord_x = 6;
+    PBlanc[9].Coord_y = 12;
+    PBlanc[9].id[0] = 'A';
+    PBlanc[9].id[1] = '9';
+    
+
+
+    PJaune[0].Coord_x = 0;
     PJaune[0].Coord_y = 4;
     PJaune[0].id[0] = 'J';
-    PJaune[0].id[1] = '1';
-    PJaune[0].id[2] = ' ';
+    PJaune[0].id[1] = '0';
+
+    PJaune[1].Coord_x = 1;
+    PJaune[1].Coord_y = 5;
+    PJaune[1].id[0] = 'J';
+    PJaune[1].id[1] = '1';
+
+    PJaune[2].Coord_x = 2;
+    PJaune[2].Coord_y = 4;
+    PJaune[2].id[0] = 'J';
+    PJaune[2].id[1] = '2';
+
+    PJaune[3].Coord_x = 2;
+    PJaune[3].Coord_y = 6;
+    PJaune[3].id[0] = 'J';
+    PJaune[3].id[1] = '3';
+
+    PJaune[4].Coord_x = 3;
+    PJaune[4].Coord_y = 5;
+    PJaune[4].id[0] = 'J';
+    PJaune[4].id[1] = '4';
+
+    PJaune[5].Coord_x = 4;
+    PJaune[5].Coord_y = 4;
+    PJaune[5].id[0] = 'J';
+    PJaune[5].id[1] = '5';
+
+    PJaune[6].Coord_x = 3;
+    PJaune[6].Coord_y = 7;
+    PJaune[6].id[0] = 'J';
+    PJaune[6].id[1] = '6';
+
+    PJaune[7].Coord_x = 4;
+    PJaune[7].Coord_y = 6;
+    PJaune[7].id[0] = 'J';
+    PJaune[7].id[1] = '7';
+
+    PJaune[8].Coord_x = 5;
+    PJaune[8].Coord_y = 5;
+    PJaune[8].id[0] = 'J';
+    PJaune[8].id[1] = '8';
+
+    PJaune[9].Coord_x = 6;
+    PJaune[9].Coord_y = 4;
+    PJaune[9].id[0] = 'J';
+    PJaune[9].id[1] = '9';
 
 }
 
