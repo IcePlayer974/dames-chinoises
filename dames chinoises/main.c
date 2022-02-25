@@ -359,8 +359,8 @@ void Sauvegarde_Enregistrement(pions PBleu[], pions PRouge[], pions PJaune[], pi
 
 }
 
-void Sauvegarde_Recuperation(){
-    
+void Sauvegarde_Recup(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[]){
+printf("test");
 }
 
 void initialisation_pion_a_deplacer(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], int variable_pr_couleur, pions pion_a_deplacer[]){
