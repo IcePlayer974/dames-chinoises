@@ -6,3 +6,4 @@ printf("\n   ");
     for(i=1;i<11;i++){
     printf("[%c]   ", Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
     }
+
