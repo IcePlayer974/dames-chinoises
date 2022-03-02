@@ -13,7 +13,7 @@ typedef struct{
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
 
     PBleu[0].Coord_x = 12;
-    PBleu[0].Coord_y = 0;
+    PBleu[0].Coord_y = 0;  //0
     PBleu[0].id[0] = 'B';
     PBleu[0].id[1] = '0';
 
@@ -1277,29 +1277,29 @@ else if(variable_pr_couleur==5){
 }}
 }
 
-char Affichage_de_pion(int x, int y,pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
+char Affichage_de_pion(int x, int y,pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[],int n){
     int i=0;
     char defaut;
     defaut = ' ';
     fflush(stdin);
     for(i=0;i<10;i++){
         if(PBleu[i].Coord_x == x && PBleu[i].Coord_y == y ){
-            return PBleu[i].id[0];
+            return PBleu[i].id[n];
         }
         if(PVert[i].Coord_x == x && PVert[i].Coord_y == y ){
-            return PVert[i].id[0];
+            return PVert[i].id[n];
         }
         if(PRouge[i].Coord_x == x && PRouge[i].Coord_y == y ){
-            return PRouge[i].id[0];
+            return PRouge[i].id[n];
         }
         if(PNoir[i].Coord_x == x && PNoir[i].Coord_y == y ){
-            return PNoir[i].id[0];
+            return PNoir[i].id[n];
         }
         if(PBlanc[i].Coord_x == x && PBlanc[i].Coord_y == y ){
-            return PBlanc[i].id[0];
+            return PBlanc[i].id[n];
         }
         if(PJaune[i].Coord_x == x && PJaune[i].Coord_y == y ){
-            return PJaune[i].id[0];
+            return PJaune[i].id[n];
         }
     }
 return defaut;
@@ -1308,127 +1308,127 @@ return defaut;
 void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
     int i,k;
     //couche 0
-    printf("\n");
-    for(i=0;i<6;i++){
-        printf("      ");
+    printf("\n     ");
+    for(i=0;i<43;i++){
+        printf(" ");
     }
-    printf("[%c] \n   ", Affichage_de_pion(12,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c] \n   ", Affichage_de_pion(12,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(12,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     // le décalage est important a coté du \n
     //chouche 1
-    for(i=0;i<5;i++){
-        printf("      ");
+    for(i=0;i<41;i++){
+        printf(" ");
     }
     for(i=11;i<15;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,1,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,1,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,1,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n");
+    printf("\n    ");
     //chouche 2
 
-    for(i=0;i<5;i++){
-        printf("      ");
+    for(i=0;i<36;i++){
+        printf(" ");
     }
     for(i=10;i<15;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,2,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,2,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0), Affichage_de_pion(i,2,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n   ");
+    printf("\n  ");
     //chouche 3
-    for(i=0;i<4;i++){
-        printf("      ");
+    for(i=0;i<34;i++){
+        printf(" ");
     }
     for(i=9;i<16;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,3,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,3,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,3,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
     printf("\n");
     //chouche 4
     for(i=0;i<26;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,4,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,4,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,4,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n   ");
+    printf("\n    ");
     //chouche 5
     for(i=1;i<24;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,5,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,5,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,5,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
     printf("\n");
     //chouche 6
     for(i=0;i<1;i++){
-        printf("      ");
+        printf("        ");
     }
     for(i=2;i<23;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,6,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,6,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,6,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n   ");
+    printf("\n    ");
     //chouche 7
     for(i=0;i<1;i++){
-        printf("      ");
+        printf("        ");
     }
     for(i=3;i<22;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,7,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,7,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,7,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
     printf("\n");
     //chouche 8
     for(i=0;i<2;i++){
-        printf("      ");
+        printf("        ");
     }
     for(i=4;i<21;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,8,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,8,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,8,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n   ");
+    printf("\n    ");
     //chouche 9
     for(i=0;i<1;i++){
-        printf("      ");
+        printf("        ");
     }
     for(i=3;i<22;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
     printf("\n");
     //chouche 10
     for(i=0;i<1;i++){
-        printf("      ");
+        printf("        ");
     }
     for(i=2;i<23;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,10,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,10,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,10,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n   ");
+    printf("\n    ");
     //chouche 11
     for(i=1;i<24;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,11,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,11,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,11,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
     printf("\n");
     // //chouche 12
  
     for(i=0;i<25;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,12,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,12,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,12,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n   ");
+    printf("\n  ");
     //chouche 13
-    for(i=0;i<4;i++){
-        printf("      ");
+    for(i=0;i<34;i++){
+        printf(" ");
     }
     for(i=9;i<16;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,13,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,13,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,13,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n");
+    printf("\n    ");
     // //chouche 14
-    for(i=0;i<5;i++){
-        printf("      ");
+    for(i=0;i<36;i++){
+        printf(" ");
     }
     for(i=10;i<15;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,14,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,14,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,14,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
-    printf("\n   ");
+    printf("\n    ");
     //chouche 15
-    for(i=0;i<5;i++){
-        printf("      ");
+    for(i=0;i<40;i++){
+        printf(" ");
     }
     for(i=11;i<14;(i=i+2)){
-    printf("[%c]   ", Affichage_de_pion(i,15,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c]    ", Affichage_de_pion(i,15,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,15,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
     }
     printf("\n");
     //couche 16
-    for(i=0;i<6;i++){
-        printf("      ");
+    for(i=0;i<48;i++){
+        printf(" ");
     }
-    printf("[%c] \n   ", Affichage_de_pion(12,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune));
+    printf("[%c%c] \n    ", Affichage_de_pion(12,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(12,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
 }
 
 int main(){
