@@ -1434,7 +1434,6 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
 int main(){
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[110];
         int variable_pr_couleur=1; //variable a faire modifier pour connaitre a qui est le tour
-
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 // choix_numero_pion();1
