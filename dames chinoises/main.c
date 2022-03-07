@@ -1515,8 +1515,7 @@ initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_
 
 //printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
 //printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour debogage    proute
-
- Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune); 
+ system("cls");
  }while(truc!=10);
  Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 }
