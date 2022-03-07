@@ -329,27 +329,21 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
 void Sauvegarde_Enregistrement(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[]){
     int i;
     FILE *sauvegarde=fopen("sauvegarde.txt","w+");
-        fprintf(sauvegarde," x; y\n Bleu \n");
     for(i=0;i<8;i++){
         fprintf(sauvegarde,"%i; %i; \n",PBleu[i].Coord_x ,PBleu[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n Rouge \n");
     for(i=0;i<8;i++){
         fprintf(sauvegarde,"%i; %i; \n",PRouge[i].Coord_x ,PRouge[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n Jaune \n");
     for(i=0;i<8;i++){
         fprintf(sauvegarde,"%i; %i; \n",PJaune[i].Coord_x ,PJaune[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n PNoir\n");
     for(i=0;i<8;i++){
         fprintf(sauvegarde,"%i; %i; \n",PNoir[i].Coord_x ,PNoir[i].Coord_y );
     }
-         fprintf(sauvegarde," x; y\n PVert\n");
     for(i=0;i<8;i++){
         fprintf(sauvegarde,"%i; %i; \n",PVert[i].Coord_x ,PVert[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n PBlanc\n");
     for(i=0;i<8;i++){
         fprintf(sauvegarde,"%i; %i; \n",PBlanc[i].Coord_x ,PBlanc[i].Coord_y );
     }
@@ -358,8 +352,43 @@ void Sauvegarde_Enregistrement(pions PBleu[], pions PRouge[], pions PJaune[], pi
 
 }
 
-void Sauvegarde_Recup(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[]){
-printf("test");
+void Sauvegarde_recup(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[]){
+    int index=0;
+    FILE *sauvegarde=fopen("sauvegarde.txt","r");
+    pions *pion = malloc(4000 * sizeof *pion);
+
+   while((fscanf(sauvegarde, "%i %i", &pion[index].Coord_x, &pion[index].Coord_y))== 2){
+        printf("%i %i\n",pion[index].Coord_x,pion[index].Coord_y);
+        if(index<10){
+            PBleu[index].Coord_x= pion[index].Coord_x;
+            PBleu[index].Coord_y= pion[index].Coord_y;
+        }else{
+        if(index<20){
+            PRouge[index%10].Coord_x= pion[index].Coord_x;
+            PRouge[index%10].Coord_y= pion[index].Coord_y;
+            printf("index modulo 10 =%i", (index%10));
+        }else{
+        if(index<30){
+            PJaune[index%10].Coord_x= pion[index].Coord_x;
+            PJaune[index%10].Coord_y= pion[index].Coord_y;
+        }else{
+        if(index<40){
+            PVert[index%10].Coord_x= pion[index].Coord_x;
+            PVert[index%10].Coord_y= pion[index].Coord_y;
+        }else{
+        if(index<50){
+            PVert[index%10].Coord_x= pion[index].Coord_x;
+            PVert[index%10].Coord_y= pion[index].Coord_y;
+        }
+        }
+        }
+    }
+        index++;
+   }
+    
+
+} 
+fclose(sauvegarde);
 }
 
 void initialisation_pion_a_deplacer(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], int variable_pr_couleur, pions pion_a_deplacer[]){
@@ -1345,7 +1374,7 @@ char Affichage_de_pion(int x, int y,pions PBleu[],pions PVert[],pions PRouge[],p
     }
 return defaut;
 }
-
+ 
 void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
     int i,k;
     //couche 0
