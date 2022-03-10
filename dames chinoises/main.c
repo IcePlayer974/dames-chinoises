@@ -1526,26 +1526,26 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
 
 
 int main(){
-int truc=100;
-pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[108];
-int variable_pr_couleur=1,numero_pion, sortie_p[5]; //variable a faire modifier pour connaitre a qui est le tour
+    int truc=100;
+    pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[108];
+    int variable_pr_couleur=1,numero_pion, sortie_p[5]; //variable a faire modifier pour connaitre a qui est le tour
 
-// en cas de fichier de sauvegarde non présente, cette initialisation assurera l'emplacment initiale des pions en tout temps
-innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,cases_en_dehors_du_jeu);
-do{
-Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
-initialisation_pion_a_deplacer(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
-numero_pion=choix_numero_pion();
-deplacement_pion(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
-initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
-if(variable_pr_couleur<5){
+    // en cas de fichier de sauvegarde non présente, cette initialisation assurera l'emplacment initiale des pions en tout temps
+    innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,cases_en_dehors_du_jeu);
+    do{
+    Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
+    initialisation_pion_a_deplacer(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
+    numero_pion=choix_numero_pion();
+    deplacement_pion(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
+    initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
+    if(variable_pr_couleur<5){
     variable_pr_couleur=1;
-}else{
+    }else{
     variable_pr_couleur=0;
-}
-//printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
-//printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour debogage    proute
- 
- }while(truc!=10);
- Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
+    }
+    //printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
+    //printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour debogage    proute
+
+    }while(truc!=10);
+    Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 }
