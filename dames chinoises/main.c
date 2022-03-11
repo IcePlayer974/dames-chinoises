@@ -13,14 +13,46 @@ typedef struct{
 void startingblock() {
 	system("color E");
 	printf_s("                                             \x10 Bienvenu dans le jeu des dames chinoises \x11");
-	printf_s("\n  Lors de votre tour selection le pion que vous souhaiter bouge votre objetif que la totalite de votre qui soit dans le triangles de l'equipe en face de votre bases il vous ete totalment interdit de bloque l'accès a votre bases, vous le pouvez pas manger les autre pions mais passer par dessus pour faire de plus grand saut");
+	printf_s("\n  Lors de votre tour selection le pion que vous souhaiter bouge votre objetif que la totalite de votre qui soit dans le triangles de l'equipe en face de votre bases il vous ete totalment interdit de bloque l'acces a votre bases, vous le pouvez pas manger les autre pions mais passer par dessus pour faire de plus grand saut");
     printf_s("                                                      \n\n\x16 BON JEU A VOUS  \n\n\nPressez une touche pour passer...\n");
     getchar();
     system("cls");
 	system("color 7");
 }
 
-void menujoueur(){}
+int menujeux(){
+    int rep;
+    system("color C");
+    printf_s("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
+    do{
+        printf_s("\n\n\x16 Pour le premier niveau en battle royal a 6 taper 1");
+        printf_s("\n\x16 Pour le premier niveau en versus a 1 contre taper  2");
+        printf_s("\n\x16 Pour jouer avec le mode graphique taper 3");
+        printf("\n");
+	
+
+    scanf("%i",&rep);
+    switch(rep){
+        case 1 :
+        rep=2;
+            system("cls");
+            return(rep);
+            break;
+        case 2 :
+            system("cls");
+            return(rep);
+            break;
+        case 3 :
+            printf("Bon le developpeur dort un peut il reviens plus tard\n");
+            Sleep(3000);
+            system("cls");
+            return(rep);
+            break;
+        default : printf("Erreur de saisie merci de recommencer\n");
+    }
+    }while(rep<1 || rep>3);
+
+}
 
 // peut etre faire m'initialisiation par le biai d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[],pions cases_en_dehors_du_jeu[]){
@@ -1552,6 +1584,9 @@ int main(){
         int variable_pr_couleur=0,numero_pion, sortie_p[3],D_B_main=0; //variable a faire modifier pour connaitre a qui est le tour
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,cases_en_dehors_du_jeu);
 startingblock();
+menujeux();
+system("color 7"); 
+
 do{
     do{    
         Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
