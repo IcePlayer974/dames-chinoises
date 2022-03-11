@@ -9,6 +9,19 @@ typedef struct{
     char id[2];
 
 }pions;
+
+void startingblock() {
+	system("color E");
+	printf_s("                                             \x10 Bienvenu dans le jeu des dames chinoises \x11");
+	printf_s("\n  Lors de votre tour selection le pion que vous souhaiter bouge votre objetif que la totalite de votre qui soit dans le triangles de l'equipe en face de votre bases il vous ete totalment interdit de bloque l'accès a votre bases, vous le pouvez pas manger les autre pions mais passer par dessus pour faire de plus grand saut");
+    printf_s("                                                      \n\n\x16 BON JEU A VOUS  \n\n\nPressez une touche pour passer...\n");
+    getchar();
+    system("cls");
+	system("color 7");
+}
+
+void menujoueur(){}
+
 // peut etre faire m'initialisiation par le biai d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[]){
 
@@ -1434,6 +1447,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
 int main(){
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[110];
         int variable_pr_couleur=1; //variable a faire modifier pour connaitre a qui est le tour
+startingblock();
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 // choix_numero_pion();1
