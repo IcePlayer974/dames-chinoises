@@ -108,7 +108,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBleu[9].id[1] = '9';
 
 
-
     PVert[0].Coord_x = 24;
     PVert[0].Coord_y = 4;
     PVert[0].id[0] = 'V';
@@ -158,7 +157,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PVert[9].Coord_y = 4;
     PVert[9].id[0] = 'V';
     PVert[9].id[1] = '9';
-
 
 
     PRouge[0].Coord_x = 24;
@@ -212,7 +210,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PRouge[9].id[1] = '9';
 
 
-
     PNoir[0].Coord_x = 12;
     PNoir[0].Coord_y = 16;
     PNoir[0].id[0] = 'N';
@@ -262,7 +259,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PNoir[9].Coord_y = 13;
     PNoir[9].id[0] = 'N';
     PNoir[9].id[1] = '9';
-
 
 
     PBlanc[0].Coord_x = 0;
@@ -315,7 +311,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBlanc[9].id[0] = 'A';
     PBlanc[9].id[1] = '9';
     
-
 
     PJaune[0].Coord_x = 0;
     PJaune[0].Coord_y = 4;
@@ -478,158 +473,119 @@ cases_en_dehors_du_jeu[35].Coord_y=13;
 cases_en_dehors_du_jeu[36].Coord_x=12;
 cases_en_dehors_du_jeu[36].Coord_y=-1;
 
-
 cases_en_dehors_du_jeu[37].Coord_x=11;
 cases_en_dehors_du_jeu[37].Coord_y=0; 
-
 
 cases_en_dehors_du_jeu[38].Coord_x=10;
 cases_en_dehors_du_jeu[38].Coord_y=1; 
 
-
 cases_en_dehors_du_jeu[39].Coord_x=9;
 cases_en_dehors_du_jeu[39].Coord_y=2;
-
 
 cases_en_dehors_du_jeu[40].Coord_x=8;
 cases_en_dehors_du_jeu[40].Coord_y=3;
 
-
 cases_en_dehors_du_jeu[41].Coord_x=11;
 cases_en_dehors_du_jeu[41].Coord_y=-1;
-
 
 cases_en_dehors_du_jeu[42].Coord_x=10;
 cases_en_dehors_du_jeu[42].Coord_y=0;
 
-
 cases_en_dehors_du_jeu[43].Coord_x=9;
 cases_en_dehors_du_jeu[43].Coord_y=1;
-
 
 cases_en_dehors_du_jeu[44].Coord_x=8;
 cases_en_dehors_du_jeu[44].Coord_y=2;
 
-
 cases_en_dehors_du_jeu[45].Coord_x=7;
 cases_en_dehors_du_jeu[45].Coord_y=3;
-
 
 cases_en_dehors_du_jeu[46].Coord_x=12;
 cases_en_dehors_du_jeu[46].Coord_y=-1;
 
-
 cases_en_dehors_du_jeu[47].Coord_x=13;
 cases_en_dehors_du_jeu[47].Coord_y=0;
-
 
 cases_en_dehors_du_jeu[48].Coord_x=14;
 cases_en_dehors_du_jeu[48].Coord_y=1;
 
-
 cases_en_dehors_du_jeu[49].Coord_x=15;
 cases_en_dehors_du_jeu[49].Coord_y=2;
-
 
 cases_en_dehors_du_jeu[50].Coord_x=16;
 cases_en_dehors_du_jeu[50].Coord_y=3;
 
-
 cases_en_dehors_du_jeu[51].Coord_x=13;
 cases_en_dehors_du_jeu[51].Coord_y=-1;
-
 
 cases_en_dehors_du_jeu[52].Coord_x=14;
 cases_en_dehors_du_jeu[52].Coord_y=0;
 
-
 cases_en_dehors_du_jeu[53].Coord_x=15;
 cases_en_dehors_du_jeu[53].Coord_y=1;
-
 
 cases_en_dehors_du_jeu[54].Coord_x=16;
 cases_en_dehors_du_jeu[54].Coord_y=2;
 
-
 cases_en_dehors_du_jeu[55].Coord_x=17;
 cases_en_dehors_du_jeu[55].Coord_y=3;
-
 
 cases_en_dehors_du_jeu[56].Coord_x=12;
 cases_en_dehors_du_jeu[56].Coord_y=17;
 
-
 cases_en_dehors_du_jeu[57].Coord_x=11;
 cases_en_dehors_du_jeu[57].Coord_y=16;
-
 
 cases_en_dehors_du_jeu[58].Coord_x=10;
 cases_en_dehors_du_jeu[58].Coord_y=15;
 
-
 cases_en_dehors_du_jeu[59].Coord_x=9;
 cases_en_dehors_du_jeu[59].Coord_y=14;
-
 
 cases_en_dehors_du_jeu[60].Coord_x=8;
 cases_en_dehors_du_jeu[60].Coord_y=13;
 
-
 cases_en_dehors_du_jeu[61].Coord_x=11;
 cases_en_dehors_du_jeu[61].Coord_y=17;
-
 
 cases_en_dehors_du_jeu[62].Coord_x=10;
 cases_en_dehors_du_jeu[62].Coord_y=16;
 
-
 cases_en_dehors_du_jeu[63].Coord_x=9;
 cases_en_dehors_du_jeu[63].Coord_y=15;
-
 
 cases_en_dehors_du_jeu[64].Coord_x=8;
 cases_en_dehors_du_jeu[64].Coord_y=14;
 
-
 cases_en_dehors_du_jeu[65].Coord_x=7;
 cases_en_dehors_du_jeu[65].Coord_y=13;
-
 
 cases_en_dehors_du_jeu[66].Coord_x=12;
 cases_en_dehors_du_jeu[66].Coord_y=17;
 
-
 cases_en_dehors_du_jeu[67].Coord_x=13;
 cases_en_dehors_du_jeu[67].Coord_y=16;
-
 
 cases_en_dehors_du_jeu[68].Coord_x=14;
 cases_en_dehors_du_jeu[68].Coord_y=15;
 
-
 cases_en_dehors_du_jeu[69].Coord_x=15;
 cases_en_dehors_du_jeu[69].Coord_y=14;
-
 
 cases_en_dehors_du_jeu[70].Coord_x=16;
 cases_en_dehors_du_jeu[70].Coord_y=13;
 
-
 cases_en_dehors_du_jeu[71].Coord_x=13;
 cases_en_dehors_du_jeu[71].Coord_y=17;
-
 
 cases_en_dehors_du_jeu[72].Coord_x=14;
 cases_en_dehors_du_jeu[72].Coord_y=16;
 
-
 cases_en_dehors_du_jeu[73].Coord_x=15;
 cases_en_dehors_du_jeu[73].Coord_y=15;
 
-
 cases_en_dehors_du_jeu[74].Coord_x=16;
 cases_en_dehors_du_jeu[74].Coord_y=14;
-
 
 cases_en_dehors_du_jeu[75].Coord_x=17;
 cases_en_dehors_du_jeu[75].Coord_y=13;
