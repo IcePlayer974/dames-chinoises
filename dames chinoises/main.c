@@ -9,6 +9,51 @@ typedef struct{
     char id[2];
 
 }pions;
+
+void startingblock() {
+	system("color E");
+	printf_s("                                             \x10 Bienvenu dans le jeu des dames chinoises \x11");
+	printf_s("\n  Lors de votre tour selection le pion que vous souhaiter bouge votre objetif que la totalite de votre qui soit dans le triangles de l'equipe en face de votre bases il vous ete totalment interdit de bloque l'acces a votre bases, vous le pouvez pas manger les autre pions mais passer par dessus pour faire de plus grand saut");
+    printf_s("                                                      \n\n\x16 BON JEU A VOUS  \n\n\nPressez une touche pour passer...\n");
+    getchar();
+    system("cls");
+	system("color 7");
+}
+
+int menujeux(){
+    int rep;
+    system("color C");
+    printf_s("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
+    do{
+        printf_s("\n\n\x16 Pour le premier niveau en battle royal a 6 taper 1");
+        printf_s("\n\x16 Pour le premier niveau en versus a 1 contre taper  2");
+        printf_s("\n\x16 Pour jouer avec le mode graphique taper 3");
+        printf("\n");
+	
+
+    scanf("%i",&rep);
+    switch(rep){
+        case 1 :
+        rep=2;
+            system("cls");
+            return(rep);
+            break;
+        case 2 :
+            system("cls");
+            return(rep);
+            break;
+        case 3 :
+            printf("Bon le developpeur dort un peut il reviens plus tard\n");
+            Sleep(3000);
+            system("cls");
+            return(rep);
+            break;
+        default : printf("Erreur de saisie merci de recommencer\n");
+    }
+    }while(rep<1 || rep>3);
+
+}
+
 // peut etre faire m'initialisiation par le biai d'un fichier externe, un emplacement par défaut par exemple
 void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[],pions cases_en_dehors_du_jeu[]){
 
@@ -63,7 +108,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBleu[9].id[1] = '9';
 
 
-
     PVert[0].Coord_x = 24;
     PVert[0].Coord_y = 4;
     PVert[0].id[0] = 'V';
@@ -113,7 +157,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PVert[9].Coord_y = 4;
     PVert[9].id[0] = 'V';
     PVert[9].id[1] = '9';
-
 
 
     PRouge[0].Coord_x = 24;
@@ -167,7 +210,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PRouge[9].id[1] = '9';
 
 
-
     PNoir[0].Coord_x = 12;
     PNoir[0].Coord_y = 16;
     PNoir[0].id[0] = 'N';
@@ -217,7 +259,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PNoir[9].Coord_y = 13;
     PNoir[9].id[0] = 'N';
     PNoir[9].id[1] = '9';
-
 
 
     PBlanc[0].Coord_x = 0;
@@ -270,7 +311,6 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PBlanc[9].id[0] = 'A';
     PBlanc[9].id[1] = '9';
     
-
 
     PJaune[0].Coord_x = 0;
     PJaune[0].Coord_y = 4;
@@ -433,158 +473,119 @@ cases_en_dehors_du_jeu[35].Coord_y=13;
 cases_en_dehors_du_jeu[36].Coord_x=12;
 cases_en_dehors_du_jeu[36].Coord_y=-1;
 
-
 cases_en_dehors_du_jeu[37].Coord_x=11;
 cases_en_dehors_du_jeu[37].Coord_y=0; 
-
 
 cases_en_dehors_du_jeu[38].Coord_x=10;
 cases_en_dehors_du_jeu[38].Coord_y=1; 
 
-
 cases_en_dehors_du_jeu[39].Coord_x=9;
 cases_en_dehors_du_jeu[39].Coord_y=2;
-
 
 cases_en_dehors_du_jeu[40].Coord_x=8;
 cases_en_dehors_du_jeu[40].Coord_y=3;
 
-
 cases_en_dehors_du_jeu[41].Coord_x=11;
 cases_en_dehors_du_jeu[41].Coord_y=-1;
-
 
 cases_en_dehors_du_jeu[42].Coord_x=10;
 cases_en_dehors_du_jeu[42].Coord_y=0;
 
-
 cases_en_dehors_du_jeu[43].Coord_x=9;
 cases_en_dehors_du_jeu[43].Coord_y=1;
-
 
 cases_en_dehors_du_jeu[44].Coord_x=8;
 cases_en_dehors_du_jeu[44].Coord_y=2;
 
-
 cases_en_dehors_du_jeu[45].Coord_x=7;
 cases_en_dehors_du_jeu[45].Coord_y=3;
-
 
 cases_en_dehors_du_jeu[46].Coord_x=12;
 cases_en_dehors_du_jeu[46].Coord_y=-1;
 
-
 cases_en_dehors_du_jeu[47].Coord_x=13;
 cases_en_dehors_du_jeu[47].Coord_y=0;
-
 
 cases_en_dehors_du_jeu[48].Coord_x=14;
 cases_en_dehors_du_jeu[48].Coord_y=1;
 
-
 cases_en_dehors_du_jeu[49].Coord_x=15;
 cases_en_dehors_du_jeu[49].Coord_y=2;
-
 
 cases_en_dehors_du_jeu[50].Coord_x=16;
 cases_en_dehors_du_jeu[50].Coord_y=3;
 
-
 cases_en_dehors_du_jeu[51].Coord_x=13;
 cases_en_dehors_du_jeu[51].Coord_y=-1;
-
 
 cases_en_dehors_du_jeu[52].Coord_x=14;
 cases_en_dehors_du_jeu[52].Coord_y=0;
 
-
 cases_en_dehors_du_jeu[53].Coord_x=15;
 cases_en_dehors_du_jeu[53].Coord_y=1;
-
 
 cases_en_dehors_du_jeu[54].Coord_x=16;
 cases_en_dehors_du_jeu[54].Coord_y=2;
 
-
 cases_en_dehors_du_jeu[55].Coord_x=17;
 cases_en_dehors_du_jeu[55].Coord_y=3;
-
 
 cases_en_dehors_du_jeu[56].Coord_x=12;
 cases_en_dehors_du_jeu[56].Coord_y=17;
 
-
 cases_en_dehors_du_jeu[57].Coord_x=11;
 cases_en_dehors_du_jeu[57].Coord_y=16;
-
 
 cases_en_dehors_du_jeu[58].Coord_x=10;
 cases_en_dehors_du_jeu[58].Coord_y=15;
 
-
 cases_en_dehors_du_jeu[59].Coord_x=9;
 cases_en_dehors_du_jeu[59].Coord_y=14;
-
 
 cases_en_dehors_du_jeu[60].Coord_x=8;
 cases_en_dehors_du_jeu[60].Coord_y=13;
 
-
 cases_en_dehors_du_jeu[61].Coord_x=11;
 cases_en_dehors_du_jeu[61].Coord_y=17;
-
 
 cases_en_dehors_du_jeu[62].Coord_x=10;
 cases_en_dehors_du_jeu[62].Coord_y=16;
 
-
 cases_en_dehors_du_jeu[63].Coord_x=9;
 cases_en_dehors_du_jeu[63].Coord_y=15;
-
 
 cases_en_dehors_du_jeu[64].Coord_x=8;
 cases_en_dehors_du_jeu[64].Coord_y=14;
 
-
 cases_en_dehors_du_jeu[65].Coord_x=7;
 cases_en_dehors_du_jeu[65].Coord_y=13;
-
 
 cases_en_dehors_du_jeu[66].Coord_x=12;
 cases_en_dehors_du_jeu[66].Coord_y=17;
 
-
 cases_en_dehors_du_jeu[67].Coord_x=13;
 cases_en_dehors_du_jeu[67].Coord_y=16;
-
 
 cases_en_dehors_du_jeu[68].Coord_x=14;
 cases_en_dehors_du_jeu[68].Coord_y=15;
 
-
 cases_en_dehors_du_jeu[69].Coord_x=15;
 cases_en_dehors_du_jeu[69].Coord_y=14;
-
 
 cases_en_dehors_du_jeu[70].Coord_x=16;
 cases_en_dehors_du_jeu[70].Coord_y=13;
 
-
 cases_en_dehors_du_jeu[71].Coord_x=13;
 cases_en_dehors_du_jeu[71].Coord_y=17;
-
 
 cases_en_dehors_du_jeu[72].Coord_x=14;
 cases_en_dehors_du_jeu[72].Coord_y=16;
 
-
 cases_en_dehors_du_jeu[73].Coord_x=15;
 cases_en_dehors_du_jeu[73].Coord_y=15;
 
-
 cases_en_dehors_du_jeu[74].Coord_x=16;
 cases_en_dehors_du_jeu[74].Coord_y=14;
-
 
 cases_en_dehors_du_jeu[75].Coord_x=17;
 cases_en_dehors_du_jeu[75].Coord_y=13;
@@ -1706,6 +1707,10 @@ int main(){
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[108];
         int variable_pr_couleur=0,numero_pion, sortie_p[3],D_B_main=0; //variable a faire modifier pour connaitre a qui est le tour
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,cases_en_dehors_du_jeu);
+startingblock();
+menujeux();
+system("color 7"); 
+
 do{
     do{    
         Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
