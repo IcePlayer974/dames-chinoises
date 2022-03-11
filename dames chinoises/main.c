@@ -34,11 +34,16 @@ int menujeux(){
     scanf("%i",&rep);
     switch(rep){
         case 1 :
-        rep=2;
+            printf("Vous avez choisie le mode a chacun pour son camps\n");
+            printf("Bonne partie a toi !");
+            Sleep(4000);
             system("cls");
             return(rep);
             break;
         case 2 :
+            printf("Vous avez choisie le mode versus \n");
+            printf("Bonne partie a vous !");
+            Sleep(4000);
             system("cls");
             return(rep);
             break;
