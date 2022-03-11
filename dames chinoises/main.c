@@ -45,6 +45,7 @@ int menujeux(){
         case 3 :
             printf("Bon le developpeur dort un peut il reviens plus tard\n");
             Sleep(4000);
+
             system("cls");
             return(rep);
             break;
@@ -1438,7 +1439,7 @@ if (d[3]==0 && (B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numer
     //printf("%i\n",rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu));
 }
 if(D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1){
-    printf("Taper 5 pour aller a droite \n");
+    printf("Taper 5 pour aller a droite \n%i",D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion));
 }
 if(G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1){
     printf("Taper 6 pour aller a gauche \n");
