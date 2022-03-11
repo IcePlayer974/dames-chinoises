@@ -688,42 +688,56 @@ cases_en_dehors_du_jeu[107].Coord_y=11;
 
 }
 
- 
-
-void Sauvegarde_Enregistrement(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[]){
+// L'enregistrement d'une partie, si déja présente, l'ancien serai écrasée
+void Sauvegarde_Enregistrement(pions PBleu[], pions PVert[], pions PRouge[], pions PNoir[], pions PJaune[], pions PBlanc[]){
     int i;
     FILE *sauvegarde=fopen("sauvegarde.txt","w+");
-        fprintf(sauvegarde," x; y\n Bleu \n");
     for(i=0;i<8;i++){
-        fprintf(sauvegarde,"%i; %i; \n",PBleu[i].Coord_x ,PBleu[i].Coord_y );
+        fprintf(sauvegarde,"%i %i \n",PBleu[i].Coord_x ,PBleu[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n Rouge \n");
     for(i=0;i<8;i++){
-        fprintf(sauvegarde,"%i; %i; \n",PRouge[i].Coord_x ,PRouge[i].Coord_y );
+        fprintf(sauvegarde,"%i %i \n",PRouge[i].Coord_x ,PRouge[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n Jaune \n");
     for(i=0;i<8;i++){
-        fprintf(sauvegarde,"%i; %i; \n",PJaune[i].Coord_x ,PJaune[i].Coord_y );
+        fprintf(sauvegarde,"%i %i \n",PJaune[i].Coord_x ,PJaune[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n PNoir\n");
     for(i=0;i<8;i++){
-        fprintf(sauvegarde,"%i; %i; \n",PNoir[i].Coord_x ,PNoir[i].Coord_y );
+        fprintf(sauvegarde,"%i %i \n",PNoir[i].Coord_x ,PNoir[i].Coord_y );
     }
-         fprintf(sauvegarde," x; y\n PVert\n");
     for(i=0;i<8;i++){
-        fprintf(sauvegarde,"%i; %i; \n",PVert[i].Coord_x ,PVert[i].Coord_y );
+        fprintf(sauvegarde,"%i %i \n",PVert[i].Coord_x ,PVert[i].Coord_y );
     }
-        fprintf(sauvegarde," x; y\n PBlanc\n");
     for(i=0;i<8;i++){
-        fprintf(sauvegarde,"%i; %i; \n",PBlanc[i].Coord_x ,PBlanc[i].Coord_y );
+        fprintf(sauvegarde,"%i %i \n",PBlanc[i].Coord_x ,PBlanc[i].Coord_y );
     }
     
     fclose(sauvegarde);
 
 }
 
-void Sauvegarde_Recup(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[]){
-printf("test");
+void Sauvegarde_recup(pions PBleu[], pions PVert[], pions PRouge[], pions PNoir[], pions PJaune[], pions PBlanc[]){
+    int index=0;
+    FILE *sauvegarde=fopen("sauvegarde.txt","r");
+    for(index=0;index<10;index++){
+      fscanf(sauvegarde, "%i %i\n", &PBleu[index].Coord_x, &PBleu[index].Coord_y);
+    }
+    for(index=0;index<10;index++){
+      fscanf(sauvegarde, "%i %i\n", &PVert[index].Coord_x, &PVert[index].Coord_y);
+    }
+    for(index=0;index<10;index++){
+      fscanf(sauvegarde, "%i %i\n", &PRouge[index].Coord_x, &PRouge[index].Coord_y);
+    }
+    for(index=0;index<10;index++){
+      fscanf(sauvegarde, "%i %i\n", &PNoir[index].Coord_x, &PNoir[index].Coord_y);
+    }
+    for(index=0;index<10;index++){
+      fscanf(sauvegarde, "%i %i\n", &PJaune[index].Coord_x, &PJaune[index].Coord_y);
+    }
+    for(index=0;index<10;index++){
+      fscanf(sauvegarde, "%i %i\n", &PBlanc[index].Coord_x, &PBlanc[index].Coord_y);
+    }
+    fclose(sauvegarde);
+
 }
 
 void initialisation_pion_a_deplacer(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], int variable_pr_couleur, pions pion_a_deplacer[]){
@@ -1099,6 +1113,7 @@ int rebond_H_G(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pio
     return R_H_G;
 
 }
+
 int rebond_H_D(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], pions pion_a_deplacer[], int numero_pion,int sortie_p[], pions cases_en_dehors_du_jeu[]){
     int R_H_D=0,i;
     pion_a_deplacer[numero_pion].Coord_x++;
@@ -1132,6 +1147,7 @@ pion_a_deplacer[numero_pion].Coord_x--;
 pion_a_deplacer[numero_pion].Coord_y--;
 return R_B_D;
 }
+
 int rebond_B_G(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], pions pion_a_deplacer[], int numero_pion,int sortie_p[], pions cases_en_dehors_du_jeu[]){
 int R_B_G=0,i;
 pion_a_deplacer[numero_pion].Coord_x--;
@@ -1364,9 +1380,9 @@ else if(variable_pr_couleur==2){
 }
 
 char Affichage_de_pion(int x, int y,pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PBlanc[],pions PJaune[],int n){
+    // la variable n est pour choisir le charactére du pion, vue qu'il en a 2
     int i=0;
-    char defaut;
-    defaut = ' ';
+    char defaut=' ';
     fflush(stdin);
     for(i=0;i<10;i++){
         if(PBleu[i].Coord_x == x && PBleu[i].Coord_y == y ){
