@@ -12,9 +12,9 @@ typedef struct{
 
 void startingblock() {
 	system("color E");
-	printf_s("                                             \x10 Bienvenu dans le jeu des dames chinoises \x11");
-	printf_s("\n  Lors de votre tour selection le pion que vous souhaiter bouge votre objetif que la totalite de votre qui soit dans le triangles de l'equipe en face de votre bases il vous ete totalment interdit de bloque l'acces a votre bases, vous le pouvez pas manger les autre pions mais passer par dessus pour faire de plus grand saut");
-    printf_s("                                                      \n\n\x16 BON JEU A VOUS  \n\n\nPressez une touche pour passer...\n");
+	printf("                                             \x10 Bienvenu dans le jeu des dames chinoises \x11");
+	printf("\n  Lors de votre tour selection le pion que vous souhaiter bouge votre objetif que la totalite de votre qui soit dans le triangles de l'equipe en face de votre bases il vous ete totalment interdit de bloque l'acces a votre bases, vous le pouvez pas manger les autre pions mais passer par dessus pour faire de plus grand saut");
+    printf("                                                      \n\n\x16 BON JEU A VOUS  \n\n\nPressez une touche pour passer...\n");
     getchar();
     system("cls");
 	system("color 7");
@@ -23,7 +23,7 @@ void startingblock() {
 int menujeux(){
     int rep;
     system("color C");
-    printf_s("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
+    printf("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
     do{
         printf_s("\n\n\x16 Pour le premier niveau en battle royal a 6 taper 1");
         printf_s("\n\x16 Pour le premier niveau en versus a 1 contre taper  2");
@@ -44,7 +44,7 @@ int menujeux(){
             break;
         case 3 :
             printf("Bon le developpeur dort un peut il reviens plus tard\n");
-            Sleep(3000);
+            Sleep(4000);
             system("cls");
             return(rep);
             break;
