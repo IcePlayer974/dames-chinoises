@@ -25,9 +25,9 @@ int menujeux(){
     system("color C");
     printf("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
     do{
-        printf_s("\n\n\x16 Pour le premier niveau en battle royal a 6 taper 1");
-        printf_s("\n\x16 Pour le premier niveau en versus a 1 contre taper  2");
-        printf_s("\n\x16 Pour jouer avec le mode graphique taper 3");
+        printf("\n\n\x16 Pour le premier niveau en battle royal a 6 taper 1");
+        printf("\n\x16 Pour le premier niveau en versus a 1 contre taper  2");
+        printf("\n\x16 Pour jouer avec le mode graphique taper 3");
         printf("\n");
 	
 
