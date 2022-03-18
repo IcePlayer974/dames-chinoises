@@ -48,8 +48,24 @@ int menujeux(){
            // return   NB=1 ;
                 break;
             
+            case 2 :
+            printf("\nVous avez choisie le mode versus!!\n");
+           // return   NB=1 ;
+                break;
+
+            case 3 :
+            printf("\nA 4 sur le champ de bataille!!\n");
+           // return   NB=1 ;
+                break;
+
+            case 6 :
+            printf("\nComme un 3 VS 3 mais chacun pour ca peaux!!\n");
+           // return   NB=1 ;
+                break;
+            
             default: return nbj;
                 break;
+
             }
             Sleep(4000);
             system("cls");
@@ -1468,7 +1484,7 @@ printf("Taper 9 pour changer de pion \n");
 scanf("%i",&direction);
 
 if(direction==1){
-    if(rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if(rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x-=2;
         pion_a_deplacer[numero_pion].Coord_y-=2;
     }else{
@@ -1476,7 +1492,7 @@ if(direction==1){
         pion_a_deplacer[numero_pion].Coord_y--;
 }
 }else if(direction==2){
-    if(rebond_H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if(rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x+=2;
         pion_a_deplacer[numero_pion].Coord_y-=2;
     }else{
@@ -1485,7 +1501,7 @@ if(direction==1){
     }
 }
 else if(direction==3){
-    if(rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if( rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x+=2;
         pion_a_deplacer[numero_pion].Coord_y+=2;
     }else{
@@ -1495,7 +1511,7 @@ else if(direction==3){
         //printf("Coordonne y du pion vert apres modification [%i]\n",pion_a_deplacer[j].Coord_y);
     }
 }else if(direction==4){
-    if(rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if(rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x-=2;
         pion_a_deplacer[numero_pion].Coord_y+=2;
 }else{
@@ -1754,7 +1770,6 @@ do{
     //printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
     //printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour debogage    proute
     D_B_main=0;
-    system("cls");
  }while(truc!=10);
  Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 //}
