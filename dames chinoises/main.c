@@ -22,71 +22,86 @@ void startingblock() {
 }
 
 int menujeux(){
-    int rep=0, nbj=0;
+    int rep=0; 
+    int nbj=0;
     system("color C");
     printf("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
     do{
-        printf("\n\n\x16 Pour le premier niveau en chacun pour soi taper 1");
-        printf("\n\x16 Pour le premier niveau en versus a UN contre UN taper  2");
+        printf("\n\n\x16 Pour le premier mode en chacun pour soi taper 1");
+        printf("\n\x16 Pour le premier mode en versus a UN contre UN taper  2");
         printf("\n\x16 Pour jouer avec le mode graphique taper 3");
         printf("\n");
 	
 
     scanf("%i",&rep);
    // system(cls);
-    switch(rep){
-        case 1 :
-            printf("Vous avez choisie le mode a chacun pour son camps\n");
-            printf("Entre le nombre de jouer\n");
-            scanf("%i",&nbj);
-            printf("Bonne partie a vous !");
-            system("cls");
-            system("color 7");
-            switch (nbj){
-            case 1 :
-            printf("\nVictoire gg a toi !!\n");
-           // return   NB=1 ;
+        switch(rep){
+            do{
+                case 1 :
+                printf("Vous avez choisie le mode a chacun pour son camps\n");
+                printf("Entre le nombre de jouer\n");
+                printf("Entre le nombre de jouer\n");
+                scanf("%i",&nbj);
+                system("cls");
+                printf("Bonne partie a vous !");
+                Sleep(2500);
+                system("cls");
+                system("color 7");
+
+                switch (nbj){
+                case 1 :
+                printf("\nVictoire gg a toi !!\n");
+                printf("\n");
+                return nbj;
+                    break;
+                
+                case 2 :
+                printf("\nVous avez choisie le mode versus!!\n");
+                printf("\n");
+                return nbj;
+                    break;
+
+                case 4 :
+                printf("\nA 4 sur le champ de bataille!!\n");
+                printf("\n");
+                return nbj;
+                    break;
+
+                case 6 :
+                printf("\nComme un 3 VS 3 mais chacun pour ca peaux!!\n");
+                printf("\n");
+                return nbj;
+                    break;
+                
+                default: 
+                    printf("erreur de saisie papez le nombre de joueur 2,4 ou 6\n");
+                    printf("\n");
+                    break;
+
+                }
+                }
+            while(nbj!=1 || nbj!=2 || nbj!=4 || nbj!=6);
+                Sleep(4000);
+                system("cls");
+                return(rep);
                 break;
             
             case 2 :
-            printf("\nVous avez choisie le mode versus!!\n");
-           // return   NB=1 ;
+                printf("Vous avez choisie le mode versus \n");
+                printf("Bonne partie a vous !");
+                Sleep(4000);
+                system("cls");
+                return(rep);
                 break;
-
             case 3 :
-            printf("\nA 4 sur le champ de bataille!!\n");
-           // return   NB=1 ;
-                break;
+                printf("Bon le developpeur dort un peut il reviens plus tard\n");
+                Sleep(4000);
 
-            case 6 :
-            printf("\nComme un 3 VS 3 mais chacun pour ca peaux!!\n");
-           // return   NB=1 ;
+                system("cls");
+                return(rep);
                 break;
-            
-            default: return nbj;
-                break;
-
-            }
-            Sleep(4000);
-            system("cls");
-            return(rep);
-            break;
-        case 2 :
-            printf("Vous avez choisie le mode versus \n");
-            printf("Bonne partie a vous !");
-            Sleep(4000);
-            system("cls");
-            return(rep);
-            break;
-        case 3 :
-            printf("Bon le developpeur dort un peut il reviens plus tard\n");
-            Sleep(4000);
-
-            system("cls");
-            return(rep);
-            break;
-        default : printf("Erreur de saisie merci de recommencer\n");
-    }
+            default : printf("Erreur de saisie merci de recommencer\n");
+        }
     }while(rep<1 || rep>3);
 
 }
@@ -1741,14 +1756,18 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
 
 int main(){
     int truc=100;
+    int nbj;
   //  int NB=0;
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[108];
         int variable_pr_couleur=0,numero_pion, sortie_p[3],D_B_main=0; //variable a faire modifier pour connaitre a qui est le tour
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,cases_en_dehors_du_jeu);
 //while(NB == 0){
 startingblock();
-menujeux();
-system("color 7"); 
+nbj = menujeux();
+system("color 7");
+if(nbj == 1){
+    return 0;
+} 
 
 do{
     do{    
