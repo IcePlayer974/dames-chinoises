@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <string.h>
 
+
 typedef struct{
     int Coord_x;
     int Coord_y;
@@ -21,21 +22,35 @@ void startingblock() {
 }
 
 int menujeux(){
-    int rep;
+    int rep=0, nbj=0;
     system("color C");
     printf("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
     do{
-        printf("\n\n\x16 Pour le premier niveau en battle royal a 6 taper 1");
-        printf("\n\x16 Pour le premier niveau en versus a 1 contre taper  2");
+        printf("\n\n\x16 Pour le premier niveau en chacun pour soi taper 1");
+        printf("\n\x16 Pour le premier niveau en versus a UN contre UN taper  2");
         printf("\n\x16 Pour jouer avec le mode graphique taper 3");
         printf("\n");
 	
 
     scanf("%i",&rep);
+   // system(cls);
     switch(rep){
         case 1 :
             printf("Vous avez choisie le mode a chacun pour son camps\n");
-            printf("Bonne partie a toi !");
+            printf("Entre le nombre de jouer\n");
+            scanf("%i",&nbj);
+            printf("Bonne partie a vous !");
+            system("cls");
+            system("color 7");
+            switch (nbj){
+            case 1 :
+            printf("\nVictoire gg a toi !!\n");
+           // return   NB=1 ;
+                break;
+            
+            default: return nbj;
+                break;
+            }
             Sleep(4000);
             system("cls");
             return(rep);
@@ -1710,9 +1725,11 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
 
 int main(){
     int truc=100;
+  //  int NB=0;
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[108];
         int variable_pr_couleur=0,numero_pion, sortie_p[3],D_B_main=0; //variable a faire modifier pour connaitre a qui est le tour
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,cases_en_dehors_du_jeu);
+//while(NB == 0){
 startingblock();
 menujeux();
 system("color 7"); 
@@ -1739,4 +1756,5 @@ do{
     D_B_main=0;
  }while(truc!=10);
  Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
+//}
 }
