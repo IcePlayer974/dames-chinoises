@@ -4,6 +4,7 @@
 #include <string.h>
 #include<conio.h>
 
+
 typedef struct{
     int Coord_x;
     int Coord_y;
@@ -22,21 +23,51 @@ void startingblock() {
 }
 
 int menujeux(){
-    int rep;
+    int rep=0, nbj=0;
     system("color C");
     printf("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
     do{
-        printf("\n\n\x16 Pour le premier niveau en battle royal a 6 taper 1");
-        printf("\n\x16 Pour le premier niveau en versus a 1 contre taper  2");
+        printf("\n\n\x16 Pour le premier niveau en chacun pour soi taper 1");
+        printf("\n\x16 Pour le premier niveau en versus a UN contre UN taper  2");
         printf("\n\x16 Pour jouer avec le mode graphique taper 3");
         printf("\n");
 	
 
     scanf("%i",&rep);
+   // system(cls);
     switch(rep){
         case 1 :
             printf("Vous avez choisie le mode a chacun pour son camps\n");
-            printf("Bonne partie a toi !");
+            printf("Entre le nombre de jouer\n");
+            scanf("%i",&nbj);
+            printf("Bonne partie a vous !");
+            system("cls");
+            system("color 7");
+            switch (nbj){
+            case 1 :
+            printf("\nVictoire gg a toi !!\n");
+           // return   NB=1 ;
+                break;
+            
+            case 2 :
+            printf("\nVous avez choisie le mode versus!!\n");
+           // return   NB=1 ;
+                break;
+
+            case 3 :
+            printf("\nA 4 sur le champ de bataille!!\n");
+           // return   NB=1 ;
+                break;
+
+            case 6 :
+            printf("\nComme un 3 VS 3 mais chacun pour ca peaux!!\n");
+           // return   NB=1 ;
+                break;
+            
+            default: return nbj;
+                break;
+
+            }
             Sleep(4000);
             system("cls");
             return(rep);
@@ -1455,7 +1486,7 @@ printf("Taper 9 pour changer de pion \n");
 scanf("%i",&direction);
 
 if(direction==1){
-    if(rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if(rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x-=2;
         pion_a_deplacer[numero_pion].Coord_y-=2;
     }else{
@@ -1463,7 +1494,7 @@ if(direction==1){
         pion_a_deplacer[numero_pion].Coord_y--;
 }
 }else if(direction==2){
-    if(rebond_H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if(rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x+=2;
         pion_a_deplacer[numero_pion].Coord_y-=2;
     }else{
@@ -1472,7 +1503,7 @@ if(direction==1){
     }
 }
 else if(direction==3){
-    if(rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if( rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x+=2;
         pion_a_deplacer[numero_pion].Coord_y+=2;
     }else{
@@ -1482,7 +1513,7 @@ else if(direction==3){
         //printf("Coordonne y du pion vert apres modification [%i]\n",pion_a_deplacer[j].Coord_y);
     }
 }else if(direction==4){
-    if(rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+    if(rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x-=2;
         pion_a_deplacer[numero_pion].Coord_y+=2;
 }else{
@@ -1713,9 +1744,11 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
 
 int main(){
     int truc=100;
+  //  int NB=0;
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[108];
         int variable_pr_couleur=0,numero_pion, sortie_p[3],D_B_main=0; //variable a faire modifier pour connaitre a qui est le tour
 innitialisation(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,cases_en_dehors_du_jeu);
+//while(NB == 0){
 startingblock();
 menujeux();
 system("color 7"); 
@@ -1740,7 +1773,7 @@ do{
     //printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
     //printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour debogage    proute
     D_B_main=0;
-    system("cls");
  }while(truc!=10);
  Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
+//}
 }
