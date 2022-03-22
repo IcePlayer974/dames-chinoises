@@ -2,10 +2,8 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <string.h>
-#include "1j.c"
-#include "2j.c"
-#include "4j.c"
-#include "6j.c"
+#include<conio.h>
+
 
 typedef struct{
     int Coord_x;
@@ -31,7 +29,7 @@ int menujeux(){
     printf("                                             \x10 Bienvenu dans le menu du jeu des dames chinoises \x11");
     do{
         printf("\n\n\x16 Pour le premier mode en chacun pour soi taper 1");
-        printf("\n\x16 Pour le jouer mode en versus a UN contre UN taper  2");
+        printf("\n\x16 Pour le premier mode en versus a UN contre UN taper  2");
         printf("\n\x16 Pour jouer avec le mode graphique taper 3");
         printf("\n");
 	
@@ -417,116 +415,91 @@ void innitialisation(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pi
     PJaune[9].id[0] = 'J';
     PJaune[9].id[1] = '9';
 
-cases_en_dehors_du_jeu[0].Coord_x=0; 
-cases_en_dehors_du_jeu[0].Coord_y=3; 
+//debut
+// cote
+/*
+cases_en_dehors_du_jeu[5].Coord_x;
+cases_en_dehors_du_jeu[5].Coord_y=;
 
-cases_en_dehors_du_jeu[1].Coord_x=1; 
-cases_en_dehors_du_jeu[1].Coord_y=3; 
+cases_en_dehors_du_jeu[6].Coord_x;
+cases_en_dehors_du_jeu[6].Coord_y=;
 
-cases_en_dehors_du_jeu[2].Coord_x=2; 
-cases_en_dehors_du_jeu[2].Coord_y=3; 
+cases_en_dehors_du_jeu[7].Coord_x=;
+cases_en_dehors_du_jeu[7].Coord_y=;
 
-cases_en_dehors_du_jeu[3].Coord_x=3; 
-cases_en_dehors_du_jeu[3].Coord_y=3; 
+cases_en_dehors_du_jeu[8].Coord_x=;
+cases_en_dehors_du_jeu[8].Coord_y=;
 
-cases_en_dehors_du_jeu[4].Coord_x=4;
-cases_en_dehors_du_jeu[4].Coord_y=3;
+//
+cases_en_dehors_du_jeu[9].Coord_x=;
+cases_en_dehors_du_jeu[9].Coord_y=;
 
-cases_en_dehors_du_jeu[5].Coord_x=5;
-cases_en_dehors_du_jeu[5].Coord_y=3;
+cases_en_dehors_du_jeu[10].Coord_x=;
+cases_en_dehors_du_jeu[10].Coord_y=;
 
-cases_en_dehors_du_jeu[6].Coord_x=6;
-cases_en_dehors_du_jeu[6].Coord_y=3;
+cases_en_dehors_du_jeu[11].Coord_x=;
+cases_en_dehors_du_jeu[11].Coord_y=;
 
-cases_en_dehors_du_jeu[7].Coord_x=7;
-cases_en_dehors_du_jeu[7].Coord_y=3;
+cases_en_dehors_du_jeu[12].Coord_x=;
+cases_en_dehors_du_jeu[12].Coord_y=;
 
-cases_en_dehors_du_jeu[8].Coord_x=8;
-cases_en_dehors_du_jeu[8].Coord_y=3;
 
-cases_en_dehors_du_jeu[9].Coord_x=16;
-cases_en_dehors_du_jeu[9].Coord_y=3;
 
-cases_en_dehors_du_jeu[10].Coord_x=17;
-cases_en_dehors_du_jeu[10].Coord_y=3;
+// //
 
-cases_en_dehors_du_jeu[11].Coord_x=18;
-cases_en_dehors_du_jeu[11].Coord_y=3;
 
-cases_en_dehors_du_jeu[12].Coord_x=19; 
-cases_en_dehors_du_jeu[12].Coord_y=3;
+cases_en_dehors_du_jeu[13].Coord_x;
+cases_en_dehors_du_jeu[13].Coord_y;
 
-cases_en_dehors_du_jeu[13].Coord_x=20;
-cases_en_dehors_du_jeu[13].Coord_y=3;
+cases_en_dehors_du_jeu[14].Coord_x;
+cases_en_dehors_du_jeu[14].Coord_y;
 
-cases_en_dehors_du_jeu[14].Coord_x=21;
-cases_en_dehors_du_jeu[14].Coord_y=3;
+cases_en_dehors_du_jeu[15].Coord_x=;
+cases_en_dehors_du_jeu[15].Coord_y;
 
-cases_en_dehors_du_jeu[15].Coord_x=22;
-cases_en_dehors_du_jeu[15].Coord_y=3;
+cases_en_dehors_du_jeu[16].Coord_x=;
+cases_en_dehors_du_jeu[16].Coord_y;
+//
 
-cases_en_dehors_du_jeu[16].Coord_x=23;
-cases_en_dehors_du_jeu[16].Coord_y=3;
+cases_en_dehors_du_jeu[17].Coord_x=;
+cases_en_dehors_du_jeu[17].Coord_y;
 
-cases_en_dehors_du_jeu[17].Coord_x=24;
-cases_en_dehors_du_jeu[17].Coord_y=3;
+cases_en_dehors_du_jeu[18].Coord_x=;
+cases_en_dehors_du_jeu[18].Coord_y;
 
-cases_en_dehors_du_jeu[18].Coord_x=0;
-cases_en_dehors_du_jeu[18].Coord_y=13;
+cases_en_dehors_du_jeu[19].Coord_x=;
+cases_en_dehors_du_jeu[19].Coord_y;
 
-cases_en_dehors_du_jeu[19].Coord_x=1;
-cases_en_dehors_du_jeu[19].Coord_y=13;
+cases_en_dehors_du_jeu[20].Coord_x=;
+cases_en_dehors_du_jeu[20].Coord_y=;
+//cote
+*/
 
-cases_en_dehors_du_jeu[20].Coord_x=2;
-cases_en_dehors_du_jeu[20].Coord_y=13;
+cases_en_dehors_du_jeu[29].Coord_x=9;
+cases_en_dehors_du_jeu[29].Coord_y=15;
 
-cases_en_dehors_du_jeu[21].Coord_x=3;
-cases_en_dehors_du_jeu[21].Coord_y=13;
+cases_en_dehors_du_jeu[30].Coord_x=10;
+cases_en_dehors_du_jeu[30].Coord_y=16;
 
-cases_en_dehors_du_jeu[22].Coord_x=4;
-cases_en_dehors_du_jeu[22].Coord_y=13;
+cases_en_dehors_du_jeu[31].Coord_x=15;
+cases_en_dehors_du_jeu[31].Coord_y=15;
 
-cases_en_dehors_du_jeu[23].Coord_x=5;
-cases_en_dehors_du_jeu[23].Coord_y=13;
+cases_en_dehors_du_jeu[32].Coord_x=14;
+cases_en_dehors_du_jeu[32].Coord_y=16;
 
-cases_en_dehors_du_jeu[24].Coord_x=6;
-cases_en_dehors_du_jeu[24].Coord_y=13;
+cases_en_dehors_du_jeu[33].Coord_x=9;
+cases_en_dehors_du_jeu[33].Coord_y=1;
 
-cases_en_dehors_du_jeu[25].Coord_x=7;
-cases_en_dehors_du_jeu[25].Coord_y=13;
+cases_en_dehors_du_jeu[34].Coord_x=10;
+cases_en_dehors_du_jeu[34].Coord_y=0;
+//
 
-cases_en_dehors_du_jeu[26].Coord_x=8;
-cases_en_dehors_du_jeu[26].Coord_y=13;
+cases_en_dehors_du_jeu[35].Coord_x=15;
+cases_en_dehors_du_jeu[35].Coord_y=1;
 
-cases_en_dehors_du_jeu[27].Coord_x=16;
-cases_en_dehors_du_jeu[27].Coord_y=13;
-
-cases_en_dehors_du_jeu[28].Coord_x=17; 
-cases_en_dehors_du_jeu[28].Coord_y=13;
-
-cases_en_dehors_du_jeu[29].Coord_x=18;
-cases_en_dehors_du_jeu[29].Coord_y=13;
-
-cases_en_dehors_du_jeu[30].Coord_x=19;
-cases_en_dehors_du_jeu[30].Coord_y=13;
-
-cases_en_dehors_du_jeu[31].Coord_x=20;
-cases_en_dehors_du_jeu[31].Coord_y=13;
-
-cases_en_dehors_du_jeu[32].Coord_x=21;
-cases_en_dehors_du_jeu[32].Coord_y=13;
-
-cases_en_dehors_du_jeu[33].Coord_x=22;
-cases_en_dehors_du_jeu[33].Coord_y=13;
-
-cases_en_dehors_du_jeu[34].Coord_x=23;
-cases_en_dehors_du_jeu[34].Coord_y=13;
-
-cases_en_dehors_du_jeu[35].Coord_x=24; 
-cases_en_dehors_du_jeu[35].Coord_y=13;
-
-cases_en_dehors_du_jeu[36].Coord_x=12;
-cases_en_dehors_du_jeu[36].Coord_y=-1;
+cases_en_dehors_du_jeu[36].Coord_x=14;
+cases_en_dehors_du_jeu[36].Coord_y=0;
+//fin
 
 cases_en_dehors_du_jeu[37].Coord_x=11;
 cases_en_dehors_du_jeu[37].Coord_y=0; 
@@ -693,7 +666,7 @@ cases_en_dehors_du_jeu[90].Coord_y=10;
 cases_en_dehors_du_jeu[91].Coord_x=-1;
 cases_en_dehors_du_jeu[91].Coord_y=11;
 
-cases_en_dehors_du_jeu[92].Coord_x=25;
+cases_en_dehors_du_jeu[92].Coord_x=25;                 //ici
 cases_en_dehors_du_jeu[92].Coord_y=4;
 
 cases_en_dehors_du_jeu[93].Coord_x=24;
@@ -723,19 +696,19 @@ cases_en_dehors_du_jeu[100].Coord_y=12;
 cases_en_dehors_du_jeu[101].Coord_x=25;
 cases_en_dehors_du_jeu[101].Coord_y=5;
 
-cases_en_dehors_du_jeu[102].Coord_x=26;
+cases_en_dehors_du_jeu[102].Coord_x=24;
 cases_en_dehors_du_jeu[102].Coord_y=6;
 
-cases_en_dehors_du_jeu[103].Coord_x=27;
+cases_en_dehors_du_jeu[103].Coord_x=23;
 cases_en_dehors_du_jeu[103].Coord_y=7;
 
-cases_en_dehors_du_jeu[104].Coord_x=28;
+cases_en_dehors_du_jeu[104].Coord_x=22;
 cases_en_dehors_du_jeu[104].Coord_y=8;
 
-cases_en_dehors_du_jeu[105].Coord_x=27;
+cases_en_dehors_du_jeu[105].Coord_x=23;
 cases_en_dehors_du_jeu[105].Coord_y=9;
 
-cases_en_dehors_du_jeu[106].Coord_x=26;
+cases_en_dehors_du_jeu[106].Coord_x=24;
 cases_en_dehors_du_jeu[106].Coord_y=10;
 
 cases_en_dehors_du_jeu[107].Coord_x=25;
@@ -883,13 +856,9 @@ return j;
 
 }
 
-void test(){
-    printf("\n test");
-}
-
 int test_sortie_pion(pions pion_a_deplacer[],int numero_pion, int sortie_p[], pions cases_en_dehors_du_jeu[]){
     int i,valeur_x,valeur_y;
-    for(i=0;i<4;i++){
+    for(i=0;i<6;i++){
         sortie_p[i]=0;
     }
     valeur_x=pion_a_deplacer[numero_pion].Coord_x;
@@ -899,42 +868,119 @@ int test_sortie_pion(pions pion_a_deplacer[],int numero_pion, int sortie_p[], pi
     //initialisation des cases en dehors du terrain de jeu 
 
 
+for(i=29;i<108;i++){
 
-for(i=0;i<108;i++){
-    if(pion_a_deplacer[numero_pion].Coord_x+1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==cases_en_dehors_du_jeu[i].Coord_y){
+    if((pion_a_deplacer[numero_pion].Coord_x+1) >15 && (pion_a_deplacer[numero_pion].Coord_y+1) <4){
+        sortie_p[0]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x+1) <9 && (pion_a_deplacer[numero_pion].Coord_y+1) <4){
+        sortie_p[0]=1;
+    } 
+    else if((pion_a_deplacer[numero_pion].Coord_x+1) <9 && (pion_a_deplacer[numero_pion].Coord_y+1) >12){
+        sortie_p[0]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x+1) >15 && (pion_a_deplacer[numero_pion].Coord_y+1) >12){
+        sortie_p[0]=1;
+    }
+    else if(pion_a_deplacer[numero_pion].Coord_x+1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==cases_en_dehors_du_jeu[i].Coord_y){
         sortie_p[0]=1;
         //printf("%i",sortie_p[1]);
     }
     
-    pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-    pion_a_deplacer[numero_pion].Coord_y=valeur_y;
-    
-    if(pion_a_deplacer[numero_pion].Coord_x+1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==cases_en_dehors_du_jeu[i].Coord_y){
+    if((pion_a_deplacer[numero_pion].Coord_x+1) >15 && (pion_a_deplacer[numero_pion].Coord_y-1) <4){
+        sortie_p[1]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x+1) <9 && (pion_a_deplacer[numero_pion].Coord_y-1) <4){
+        sortie_p[1]=1;
+    } 
+    else if((pion_a_deplacer[numero_pion].Coord_x+1) <9 && (pion_a_deplacer[numero_pion].Coord_y-1) >12){
+        sortie_p[1]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x+1) >15 && (pion_a_deplacer[numero_pion].Coord_y-1) >12){
+        sortie_p[1]=1;
+    }
+    else if(pion_a_deplacer[numero_pion].Coord_x+1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==cases_en_dehors_du_jeu[i].Coord_y){
         sortie_p[1]=1;
         //printf("%i",sortie_p[2]);
         }
-        
-        pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-        pion_a_deplacer[numero_pion].Coord_y=valeur_y;
 
-    if(pion_a_deplacer[numero_pion].Coord_x-1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==cases_en_dehors_du_jeu[i].Coord_y){
+    if((pion_a_deplacer[numero_pion].Coord_x-1) >15 && (pion_a_deplacer[numero_pion].Coord_y-1) <4){
+        sortie_p[2]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x-1) <9 && (pion_a_deplacer[numero_pion].Coord_y-1) <4){
+        sortie_p[2]=1;
+    } 
+    else if((pion_a_deplacer[numero_pion].Coord_x-1) <9 && (pion_a_deplacer[numero_pion].Coord_y-1) >12){
+        sortie_p[2]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x-1) >15 && (pion_a_deplacer[numero_pion].Coord_y-1) >12){
+        sortie_p[2]=1;
+    }
+    else if(pion_a_deplacer[numero_pion].Coord_x-1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==cases_en_dehors_du_jeu[i].Coord_y){
         sortie_p[2]=1;
         //printf("%i",sortie_p[3]);
         }
-        
-        pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-        pion_a_deplacer[numero_pion].Coord_y=valeur_y;
     
-    if(pion_a_deplacer[numero_pion].Coord_x-1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==cases_en_dehors_du_jeu[i].Coord_y){
+    if((pion_a_deplacer[numero_pion].Coord_x-1) >15 && (pion_a_deplacer[numero_pion].Coord_y+1) <4){
         sortie_p[3]=1;
+        //printf("test 1");
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x-1) <9 && (pion_a_deplacer[numero_pion].Coord_y+1) <4){
+        sortie_p[3]=1;
+         //printf("test 2");
+    } 
+    else if((pion_a_deplacer[numero_pion].Coord_x-1) <9 && (pion_a_deplacer[numero_pion].Coord_y+1) >12){
+        sortie_p[3]=1;
+        // printf("test 3");
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x-1) >15 && (pion_a_deplacer[numero_pion].Coord_y+1) >12){
+        sortie_p[3]=1;
+         //printf("test 4");
+    }
+    else if(pion_a_deplacer[numero_pion].Coord_x-1==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==cases_en_dehors_du_jeu[i].Coord_y){
+        sortie_p[3]=1;
+         //printf("test 5");
         //printf("%i",sortie_p[4]);
         }
-        
-        pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-        pion_a_deplacer[numero_pion].Coord_y=valeur_y;
-
+    if((pion_a_deplacer[numero_pion].Coord_x-2) >15 && (pion_a_deplacer[numero_pion].Coord_y) <4){
+        sortie_p[4]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x-2) <9 && (pion_a_deplacer[numero_pion].Coord_y) <4){
+        sortie_p[4]=1;
+    } 
+    else if((pion_a_deplacer[numero_pion].Coord_x-2) <9 && (pion_a_deplacer[numero_pion].Coord_y) >12){
+        sortie_p[4]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x-2) >15 && (pion_a_deplacer[numero_pion].Coord_y) >12){
+        sortie_p[4]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x-2) <2){
+        sortie_p[4]=1;
+    }
+    else if(pion_a_deplacer[numero_pion].Coord_x-2==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==cases_en_dehors_du_jeu[i].Coord_y){
+        sortie_p[4]=1;
+    }
+    
+    if((pion_a_deplacer[numero_pion].Coord_x+2) >15 && (pion_a_deplacer[numero_pion].Coord_y) <4){
+        sortie_p[5]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x+2) <9 && (pion_a_deplacer[numero_pion].Coord_y) <4){
+        sortie_p[5]=1;
+    } 
+    else if((pion_a_deplacer[numero_pion].Coord_x+2) <9 && (pion_a_deplacer[numero_pion].Coord_y) >12){
+        sortie_p[5]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x+2) >15 && (pion_a_deplacer[numero_pion].Coord_y) >12){
+        sortie_p[5]=1;
+    }
+    else if((pion_a_deplacer[numero_pion].Coord_x+2) >22){
+        sortie_p[5]=1;
+    }
+    else if(pion_a_deplacer[numero_pion].Coord_x+2==cases_en_dehors_du_jeu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==cases_en_dehors_du_jeu[i].Coord_y){
+        sortie_p[5]=1;
     }
     //printf("x: %i\n y :%i\n\n vx :%i\n vy :%i\n",pion_a_deplacer[numero_pion].Coord_x,pion_a_deplacer[numero_pion].Coord_y, valeur_x, valeur_y); #debogage
+}
 }
 
 int H_G(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], pions pion_a_deplacer[], int numero_pion){
@@ -1001,43 +1047,31 @@ int H_D(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVer
         if(pion_a_deplacer[numero_pion].Coord_x+1==PRouge[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==PRouge[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn1 %i\n",compteur); #debogage
         
         if(pion_a_deplacer[numero_pion].Coord_x+1==PBleu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==PBleu[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn2 %i\n",compteur); #debogage
         
-        if(pion_a_deplacer[numero_pion].Coord_x++==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y--==PJaune[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x+1==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==PJaune[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn3 %i\n",compteur); #debogage
         
         if(pion_a_deplacer[numero_pion].Coord_x+1==PNoir[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==PNoir[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn4 %i\n",compteur); #debogage
         
         if(pion_a_deplacer[numero_pion].Coord_x+1==PVert[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==PVert[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn5 %i\n",compteur); #debogage
         
         if(pion_a_deplacer[numero_pion].Coord_x+1==PBlanc[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y-1==PBlanc[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn6 %i\n",compteur); #debogage
         
 
@@ -1056,38 +1090,26 @@ int B_D(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVer
         if(pion_a_deplacer[numero_pion].Coord_x+1==PRouge[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PRouge[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn1 %i\n",compteur); #debogage
         if(pion_a_deplacer[numero_pion].Coord_x+1==PBleu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PBleu[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn2 %i\n",compteur); #debogage
         if(pion_a_deplacer[numero_pion].Coord_x+1==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PJaune[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn3 %i\n",compteur); #debogage
         if(pion_a_deplacer[numero_pion].Coord_x+1==PNoir[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PNoir[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn4 %i\n",compteur); #debogage
         if(pion_a_deplacer[numero_pion].Coord_x+1==PVert[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PVert[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn5 %i\n",compteur); #debogage
         if(pion_a_deplacer[numero_pion].Coord_x+1==PBlanc[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PBlanc[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn6 %i\n",compteur); #debogage
 
     }
@@ -1106,44 +1128,32 @@ int B_G(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVer
             //printf("rouge %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn1 %i\n",compteur);
         if(pion_a_deplacer[numero_pion].Coord_x-1==PBleu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PBleu[i].Coord_y){
             //printf("bleu %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn2 %i\n",compteur);
         if(pion_a_deplacer[numero_pion].Coord_x-1==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PJaune[i].Coord_y){
             //printf(" jaune %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn3 %i\n",compteur);
         if(pion_a_deplacer[numero_pion].Coord_x-1==PNoir[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PNoir[i].Coord_y){
             //printf("Noir %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn4 %i\n",compteur);
         if(pion_a_deplacer[numero_pion].Coord_x-1==PVert[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PVert[i].Coord_y){
             //printf("Vert %i",pion_a_deplacer[numero_pion].Coord_x);
             //printf("Vert %i",pion_a_deplacer[numero_pion].Coord_y);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn5 %i\n",compteur);
         if(pion_a_deplacer[numero_pion].Coord_x-1==PBlanc[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y+1==PBlanc[i].Coord_y){
             //printf("Blanc %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn6 %i\n",compteur);
 
     }
@@ -1158,41 +1168,32 @@ int D(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[
     valeur_x=pion_a_deplacer[numero_pion].Coord_x;
     valeur_y=pion_a_deplacer[numero_pion].Coord_y;
     for(i=0;i<10;i++){
-        if(pion_a_deplacer[numero_pion].Coord_x+1==PRouge[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PRouge[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x+2==PRouge[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PRouge[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn1 %i\n",compteur); #debogage
-        if(pion_a_deplacer[numero_pion].Coord_x+1==PBleu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBleu[i].Coord_y){
+           //  printf("pion a deplacer x %i et  pbleu x %i \npion a deplacer y %i pnleu y %i\n",pion_a_deplacer[numero_pion].Coord_x,PBleu[i].Coord_x,pion_a_deplacer[numero_pion].Coord_y,PBleu[i].Coord_y);
+        //getch();
+        if(pion_a_deplacer[numero_pion].Coord_x+2==PBleu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBleu[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn2 %i\n",compteur); #debogage
-        if(pion_a_deplacer[numero_pion].Coord_x+1==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PJaune[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x+2==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PJaune[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn3 %i\n",compteur); #debogage
-        if(pion_a_deplacer[numero_pion].Coord_x+1==PNoir[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PNoir[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x+2==PNoir[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PNoir[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn4 %i\n",compteur); #debogage
-        if(pion_a_deplacer[numero_pion].Coord_x+1==PVert[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PVert[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x+2==PVert[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PVert[i].Coord_y){
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn5 %i\n",compteur); #debogage
-        if(pion_a_deplacer[numero_pion].Coord_x+1==PBlanc[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBlanc[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x+2==PBlanc[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBlanc[i].Coord_y){
             compteur++;
+            //printf("%i",pion_a_deplacer[numero_pion].Coord_x+1==PBlanc[i].Coord_x);
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn6 %i\n",compteur); #debogage
 
     }
@@ -1207,48 +1208,37 @@ int G(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[
     valeur_x=pion_a_deplacer[numero_pion].Coord_x;
     valeur_y=pion_a_deplacer[numero_pion].Coord_y;
     for(i=0;i<10;i++){
-        if(pion_a_deplacer[numero_pion].Coord_x-1==PRouge[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PRouge[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x-2==PRouge[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PRouge[i].Coord_y){
             //printf("rouge %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn1 %i\n",compteur);
-        if(pion_a_deplacer[numero_pion].Coord_x-1==PBleu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBleu[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x-2==PBleu[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBleu[i].Coord_y){
             //printf("bleu %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn2 %i\n",compteur);
-        if(pion_a_deplacer[numero_pion].Coord_x-1==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PJaune[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x-2==PJaune[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PJaune[i].Coord_y){
             //printf(" jaune %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn3 %i\n",compteur);
-        if(pion_a_deplacer[numero_pion].Coord_x-1==PNoir[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PNoir[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x-2==PNoir[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PNoir[i].Coord_y){
             //printf("Noir %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn4 %i\n",compteur);
-        if(pion_a_deplacer[numero_pion].Coord_x-1==PVert[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PVert[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x-2==PVert[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PVert[i].Coord_y){
             //printf("Vert %i",pion_a_deplacer[numero_pion].Coord_x);
             //printf("Vert %i",pion_a_deplacer[numero_pion].Coord_y);
             compteur++;
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn5 %i\n",compteur);
-        if(pion_a_deplacer[numero_pion].Coord_x-1==PBlanc[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBlanc[i].Coord_y){
+        if(pion_a_deplacer[numero_pion].Coord_x-2==PBlanc[i].Coord_x && pion_a_deplacer[numero_pion].Coord_y==PBlanc[i].Coord_y){
             //printf("Blanc %i",pion_a_deplacer[numero_pion].Coord_x);
             compteur++;
+            //printf(" g %i",pion_a_deplacer[numero_pion].Coord_x-1==PBlanc[i].Coord_x);
             }
-            pion_a_deplacer[numero_pion].Coord_x=valeur_x;
-            pion_a_deplacer[numero_pion].Coord_y=valeur_y;
             //printf("\nn6 %i\n",compteur);
 
     }
@@ -1259,25 +1249,27 @@ int G(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[
 
 int rebond_D(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], pions pion_a_deplacer[], int numero_pion,int sortie_p[], pions cases_en_dehors_du_jeu[]){
     int R_D=0,i;
-    pion_a_deplacer[numero_pion].Coord_x++;
+    pion_a_deplacer[numero_pion].Coord_x+=2;
     test_sortie_pion(pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
-    if(D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 && sortie_p[1]==0){
-        R_D=1;
+    if(D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1){
+        if(sortie_p[5]==0){
+            R_D=1;
+        }
     }
-    pion_a_deplacer[numero_pion].Coord_x--;
+    pion_a_deplacer[numero_pion].Coord_x-=2;
     return R_D;
 }
 
 int rebond_G(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], pions pion_a_deplacer[], int numero_pion,int sortie_p[], pions cases_en_dehors_du_jeu[]){
     int R_G=0,i;
-    pion_a_deplacer[numero_pion].Coord_x--;
+    pion_a_deplacer[numero_pion].Coord_x-=2;
     test_sortie_pion(pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
     if(G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1){
-        if( sortie_p[2]==0){
+        if( sortie_p[4]==0){
             R_G=1;
+        }
     }
-    }
-    pion_a_deplacer[numero_pion].Coord_x++;
+    pion_a_deplacer[numero_pion].Coord_x+=2;
     return R_G;
 
 }
@@ -1303,8 +1295,10 @@ int rebond_H_D(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pio
     pion_a_deplacer[numero_pion].Coord_x++;
     pion_a_deplacer[numero_pion].Coord_y--;
     test_sortie_pion(pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
-    if(H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 && sortie_p[1]==0){
+    if(H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1){
+       if(sortie_p[1]==0){
         R_H_D=1;
+       }
     }
     pion_a_deplacer[numero_pion].Coord_x--;
     pion_a_deplacer[numero_pion].Coord_y++;
