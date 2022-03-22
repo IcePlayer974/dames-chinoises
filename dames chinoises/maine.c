@@ -7,6 +7,7 @@
 #include "4j.c"
 #include "6j.c"
 
+
 int startingblock() {
     int rep=0; 
     int nbj=0;
