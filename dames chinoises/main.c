@@ -96,7 +96,7 @@ int menujeux(){
                 break;
             case 3 :
                 printf("Bon le developpeur dort un peut il reviens plus tard\n");
-                Sleep(4000);
+                Sleep(4);
 
                 system("cls");
                 return(rep);
@@ -1462,99 +1462,6 @@ int test_double_pion(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[
 return DB;
 }
 
-void deplacement_pion(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], int variable_pr_couleur, pions pion_a_deplacer[], int numero_pion, int sortie_p[], pions cases_en_dehors_du_jeu[]){
-int direction,d[6],i;
-//printf("avant x%i avant y %i\n",pion_a_deplacer[numero_pion].Coord_x,pion_a_deplacer[numero_pion].Coord_y);
-test_sortie_pion(pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
-//printf("apres x%i apres y %i\n",pion_a_deplacer[numero_pion].Coord_x,pion_a_deplacer[numero_pion].Coord_y);
-//printf("avant en x %i avant en y %i",pion_a_deplacer[numero_pion].Coord_x, pion_a_deplacer[numero_pion].Coord_y);
-for(i=0;i<6;i++){
-    d[i]=sortie_p[i];
-}
- // j'ai changé ici ct choix_numero_pion() :dylan 
-printf("\nVers ou voulez vous aller ?\n");
-if(d[2]==0 && (H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)) {
-    printf("Taper 1 pour aller en haut a gauche\n");
-    //printf("%i\n",rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu));
-    }
-if(d[1]==0 && (H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)){
-    printf("Taper 2 pour aller en haut a droite \n");
-    //printf("%i\n",rebond_H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu));
-}
-if (d[0]==0 && (B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)){
-    printf("Taper 3 pour aller en bas a droite\n");
-    //printf("%i\n",rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu));
-}
-if (d[3]==0 && (B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)){
-    printf("Taper 4 pour aller en bas a gauche\n");
-    //printf("%i\n",rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu));
-}
-if(d[5]==0 && D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)==1 && rebond_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
-    printf("Taper 5 pour aller  droite \n");
-   //printf("\n D %i\n RD %i",D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion),rebond_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu));
-}
-if(d[4]==0 && G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)==1 && rebond_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
-    printf("Taper 6 pour aller a gauche \n");
-   // printf("\n%i\n %i",G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion),rebond_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu));
-}
-printf("Taper 9 pour changer de pion \n");
-scanf("%i",&direction);
-
-if(direction==1){
-    if(rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
-        pion_a_deplacer[numero_pion].Coord_x-=2;
-        pion_a_deplacer[numero_pion].Coord_y-=2;
-    }else{
-        pion_a_deplacer[numero_pion].Coord_x--;
-        pion_a_deplacer[numero_pion].Coord_y--;
-}
-}else if(direction==2){
-    if(rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
-        pion_a_deplacer[numero_pion].Coord_x+=2;
-        pion_a_deplacer[numero_pion].Coord_y-=2;
-    }else{
-        pion_a_deplacer[numero_pion].Coord_x++;
-        pion_a_deplacer[numero_pion].Coord_y--;
-    }
-}
-else if(direction==3){
-    if( rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
-        pion_a_deplacer[numero_pion].Coord_x+=2;
-        pion_a_deplacer[numero_pion].Coord_y+=2;
-    }else{
-        pion_a_deplacer[numero_pion].Coord_x++;
-        pion_a_deplacer[numero_pion].Coord_y++;
-        //printf("Coordonne x du pion vert apres modification [%i]\n",pion_a_deplacer[j].Coord_x);
-        //printf("Coordonne y du pion vert apres modification [%i]\n",pion_a_deplacer[j].Coord_y);
-    }
-}else if(direction==4){
-    if(rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
-        pion_a_deplacer[numero_pion].Coord_x-=2;
-        pion_a_deplacer[numero_pion].Coord_y+=2;
-}else{
-    pion_a_deplacer[numero_pion].Coord_x--;
-    pion_a_deplacer[numero_pion].Coord_y++;
-}
-}else if(direction==5){
-    if(D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0 && rebond_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
-        pion_a_deplacer[numero_pion].Coord_x+=4;
-   }else {
-       pion_a_deplacer[numero_pion].Coord_x+=2;
-
-   }
-}else if(direction==6){
-    if(G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0 && rebond_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)){
-        pion_a_deplacer[numero_pion].Coord_x-=4;
-    }else {
-        pion_a_deplacer[numero_pion].Coord_x-=2;
-    }
-}else if(direction==9){
-
-}else{
-    printf("Ce numero ne correspond a aucun deplacement \n");
-}
-printf("apres en x %i apres en y %i",pion_a_deplacer[numero_pion].Coord_x, pion_a_deplacer[numero_pion].Coord_y);
-}
 
 void initialisation_nv_coordonner(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], int variable_pr_couleur, pions pion_a_deplacer[]){
     int i;
@@ -1757,8 +1664,129 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     printf("[%c%c] \n    ", Affichage_de_pion(12,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(12,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
 }
 
+void deplacement_pion(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], int variable_pr_couleur, pions pion_a_deplacer[],int sortie_p[], pions cases_en_dehors_du_jeu[]){
+int direction,d[6],i, numero_pion, changement_pion, anti_triche=0, fin_tour=0;
+while(fin_tour==0){
+    initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
+    Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
+    affichage_tour(variable_pr_couleur);
+    changement_pion=0;
+if(anti_triche==0){
+    numero_pion=choix_numero_pion();
+    }
+test_sortie_pion(pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
+for(i=0;i<6;i++){
+    d[i]=sortie_p[i];
+}
+
+printf("\nVers ou voulez vous aller ?\n");
+if(d[2]==0 && (H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)) {
+    printf("Taper 1 pour aller en haut a gauche\n");
+    }
+if(d[1]==0 && (H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)){
+    printf("Taper 2 pour aller en haut a droite \n");
+}
+if (d[0]==0 && (B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)){
+    printf("Taper 3 pour aller en bas a droite\n");
+}
+if (d[3]==0 && (B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0)){
+    printf("Taper 4 pour aller en bas a gauche\n");
+}
+if(d[5]==0 && D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)==1 && rebond_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
+    printf("Taper 5 pour aller  droite \n");
+}
+if(d[4]==0 && G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)<1 || G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)==1 && rebond_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
+    printf("Taper 6 pour aller a gauche \n");
+}
+if(anti_triche==0){
+printf("taper 9 pour changer de pions\n");
+}
+printf("Taper 0 lorsque vous avez finis de jouer\n");
+scanf("%i",&direction);
+switch(direction){
+case 1 :
+    if(rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+        pion_a_deplacer[numero_pion].Coord_x-=2;
+        pion_a_deplacer[numero_pion].Coord_y-=2;
+        anti_triche=1;
+    }else{
+        pion_a_deplacer[numero_pion].Coord_x--;
+        pion_a_deplacer[numero_pion].Coord_y--;
+        anti_triche=1;
+    }
+    break;
+
+case 2 :
+    if(rebond_H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+        pion_a_deplacer[numero_pion].Coord_x+=2;
+        pion_a_deplacer[numero_pion].Coord_y-=2;
+    }else{
+        pion_a_deplacer[numero_pion].Coord_x++;
+        pion_a_deplacer[numero_pion].Coord_y--;
+    }
+    break;
+
+case 3 :
+    if(rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+        pion_a_deplacer[numero_pion].Coord_x+=2;
+        pion_a_deplacer[numero_pion].Coord_y+=2;
+        anti_triche=1;
+    }else{
+        pion_a_deplacer[numero_pion].Coord_x++;
+        pion_a_deplacer[numero_pion].Coord_y++;
+        anti_triche=1;
+    }
+    break;
+case 4 :
+    
+    if(rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
+        pion_a_deplacer[numero_pion].Coord_x-=2;
+        pion_a_deplacer[numero_pion].Coord_y+=2;
+        anti_triche=1;
+    }else{
+        pion_a_deplacer[numero_pion].Coord_x--;
+        pion_a_deplacer[numero_pion].Coord_y++;
+        anti_triche=1;
+    }
+    break;
+case 5 :
+    
+    if(D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0 && rebond_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
+        pion_a_deplacer[numero_pion].Coord_x+=4;
+        anti_triche=1;
+   }else {
+       pion_a_deplacer[numero_pion].Coord_x+=2;
+       anti_triche=1;
+
+   }
+   break;
+
+case 6 :
+    
+    if(G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0 && rebond_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)){
+        pion_a_deplacer[numero_pion].Coord_x-=4;
+        anti_triche=1;
+    }else {
+        pion_a_deplacer[numero_pion].Coord_x-=2;
+        anti_triche=1;
+    }
+    break;
+
+case 9 :
+    if(anti_triche==0){
+    changement_pion=1;
+    }else
+    printf("Vous ne pouvez pas chnager de pion après les avoir deplacer\n");
+    break;
+    
+case 0 :
+    fin_tour=1;
+}
+}
+}
+
 int main(){
-    int truc=100;
+    int win=0;
     int nbj;
   //  int NB=0;
     pions PBleu[10],PVert[10],PRouge[10],PNoir[10],PBlanc[10],PJaune[10], pion_a_deplacer[10],cases_en_dehors_du_jeu[108];
@@ -1772,27 +1800,14 @@ if(nbj == 1){
     return 0;
 } 
 
-do{
-    do{    
-        Affichage(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
-        initialisation_pion_a_deplacer(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
-        affichage_tour(variable_pr_couleur);
-        if(D_B_main==0){
-            numero_pion=choix_numero_pion();
-            D_B_main=1;
-        }
-        deplacement_pion(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu);
-        initialisation_nv_coordonner(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
-    }while(test_double_pion(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc)==1);
+do{ 
+    initialisation_pion_a_deplacer(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer);
+    deplacement_pion(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,variable_pr_couleur,pion_a_deplacer,sortie_p,cases_en_dehors_du_jeu);
     if(variable_pr_couleur!=5){
         variable_pr_couleur++;
     }else{
         variable_pr_couleur=0;
     }
-    //printf("Coordonne x du pion vert apres modification [%i]\n",PVert[0].Coord_x);
-    //printf("Coordonne y du pion vert apres modification [%i]\n",PVert[0].Coord_y);     // ||pour debogage    proute
-    D_B_main=0;
- }while(truc!=10);
+ }while(win!=1);
  Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
-//}
 }
