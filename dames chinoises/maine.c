@@ -754,7 +754,7 @@ else if(variable_pr_couleur==2){
 int choix_numero_pion(){
 int j, erreur_saisi=1;
 do{
-    printf("\nqu'elle pions voulez vous jouer ?\n");
+    printf("\nquel pion voulez vous jouer ?\n");
     scanf("%i",&j);
     if(j<10 && j>-1 ){
         erreur_saisi=0;
@@ -1671,7 +1671,7 @@ if(anti_triche==0){
 }
 if(anti_triche == 0 && deplacement_impossible[0]==1 && deplacement_impossible[1]==1&& deplacement_impossible[2]==1&& deplacement_impossible[3]==1&&deplacement_impossible[4]==1 &&deplacement_impossible[5]==1){
     system("cls");
-    Couleur (4, 11);
+    Couleur (15, 11);
     printf("\n\n\nVous ne pouvez effectuer aucun deplacement avec ce pion. Veuillez en choisir un autre\n\n");
     Couleur (7, 0);
     direction=9;
@@ -1924,7 +1924,7 @@ int startingblock() {
 
 
                         case 6 :
-                        printf("\nComme un 3 VS 3 mais chacun pour ca peaux!!\n");
+                        printf("\nComme un 3 VS 3 mais chacun pour sa peau!!\n");
                         printf("\n");
                         Sleep(3000);
                         int win6=0;
@@ -1946,7 +1946,7 @@ int startingblock() {
 
 
                         default: 
-                            printf("erreur de saisie tapez le nombre de joueur 2, 4 ou 6\n");
+                            printf("Erreur de saisie tapez le nombre de joueur 2, 4 ou 6\n");
                             printf("\n");
                             break;
 
