@@ -1428,21 +1428,27 @@ char Affichage_de_pion(int x, int y,pions PBleu[],pions PVert[],pions PRouge[],p
     fflush(stdin);
     for(i=0;i<10;i++){
         if(PBleu[i].Coord_x == x && PBleu[i].Coord_y == y ){
+            Couleur(1, 0);
             return PBleu[i].id[n];
         }
         if(PVert[i].Coord_x == x && PVert[i].Coord_y == y ){
+            Couleur(10, 0);
             return PVert[i].id[n];
         }
         if(PRouge[i].Coord_x == x && PRouge[i].Coord_y == y ){
+            Couleur(4, 0);
             return PRouge[i].id[n];
         }
         if(PNoir[i].Coord_x == x && PNoir[i].Coord_y == y ){
+            Couleur(13, 0);
             return PNoir[i].id[n];
         }
         if(PBlanc[i].Coord_x == x && PBlanc[i].Coord_y == y ){
+            Couleur(7, 0);
             return PBlanc[i].id[n];
         }
         if(PJaune[i].Coord_x == x && PJaune[i].Coord_y == y ){
+            Couleur(14, 0);
             return PJaune[i].id[n];
         }
     }
@@ -1457,6 +1463,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
         printf(" ");
     }
     printf("[%c%c] \n   ", Affichage_de_pion(12,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(12,0,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     // le décalage est important a coté du \n
     //chouche 1
     for(i=0;i<41;i++){
@@ -1464,6 +1471,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=11;i<15;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,1,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,1,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n    ");
     //chouche 2
@@ -1473,6 +1481,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=10;i<15;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,2,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0), Affichage_de_pion(i,2,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n  ");
     //chouche 3
@@ -1481,16 +1490,19 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=9;i<16;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,3,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,3,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n");
     //chouche 4
     for(i=0;i<26;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,4,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,4,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n    ");
     //chouche 5
     for(i=1;i<24;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,5,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,5,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n");
     //chouche 6
@@ -1499,6 +1511,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=2;i<23;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,6,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,6,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n    ");
     //chouche 7
@@ -1507,6 +1520,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=3;i<22;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,7,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,7,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n");
     //chouche 8
@@ -1515,6 +1529,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=4;i<21;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,8,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,8,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n    ");
     //chouche 9
@@ -1523,6 +1538,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=3;i<22;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,9,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n");
     //chouche 10
@@ -1531,17 +1547,20 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=2;i<23;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,10,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,10,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n    ");
     //chouche 11
     for(i=1;i<24;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,11,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,11,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n");
     // //chouche 12
  
     for(i=0;i<25;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,12,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,12,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n  ");
     //chouche 13
@@ -1550,6 +1569,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=9;i<16;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,13,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,13,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n    ");
     // //chouche 14
@@ -1558,6 +1578,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=10;i<15;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,14,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,14,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n    ");
     //chouche 15
@@ -1566,6 +1587,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
     }
     for(i=11;i<14;(i=i+2)){
     printf("[%c%c]    ", Affichage_de_pion(i,15,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(i,15,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
     }
     printf("\n");
     //couche 16
@@ -1573,6 +1595,7 @@ void Affichage(pions PBleu[],pions PVert[],pions PRouge[],pions PNoir[],pions PB
         printf(" ");
     }
     printf("[%c%c] \n    ", Affichage_de_pion(12,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,0),Affichage_de_pion(12,16,PBleu,PVert,PRouge,PNoir,PBlanc,PJaune,1));
+    Couleur(7, 0);
 }
 
 void deplacement_pion(pions PBleu[], pions PRouge[], pions PJaune[], pions PNoir[], pions PVert[], pions PBlanc[], int variable_pr_couleur, pions pion_a_deplacer[],int sortie_p[], pions cases_en_dehors_du_jeu[]){
