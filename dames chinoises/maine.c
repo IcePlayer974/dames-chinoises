@@ -1671,7 +1671,7 @@ if(anti_triche==0){
 }
 if(anti_triche == 0 && deplacement_impossible[0]==1 && deplacement_impossible[1]==1&& deplacement_impossible[2]==1&& deplacement_impossible[3]==1&&deplacement_impossible[4]==1 &&deplacement_impossible[5]==1){
     system("cls");
-    Couleur (15, 11);
+    Couleur (0, 11);
     printf("\n\n\nVous ne pouvez effectuer aucun deplacement avec ce pion. Veuillez en choisir un autre\n\n");
     Couleur (7, 0);
     direction=9;
@@ -1973,4 +1973,4 @@ int startingblock() {
 int main(){
     int nbj;
     nbj=startingblock();
-    }
+    }//resoudre pb de double msg quand on met le pion 0
