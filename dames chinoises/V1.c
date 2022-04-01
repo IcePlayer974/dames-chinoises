@@ -12,6 +12,11 @@ typedef struct{
 
 }pions;
 
+void Couleur(int couleurDuTexte, int couleurDeFond) {
+    HANDLE H = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(H, couleurDeFond * 16 + couleurDuTexte);
+}
+
 void startingblock() {
 	system("color E");
 	printf("                                             \x10 Bienvenu dans le jeu des dames chinoises \x11");
@@ -716,6 +721,8 @@ cases_en_dehors_du_jeu[107].Coord_y=11;
 
 
 }
+
+
 
 // L'enregistrement d'une partie, si déja présente, l'ancien serai écrasée
 void Sauvegarde_Enregistrement(pions PBleu[], pions PVert[], pions PRouge[], pions PNoir[], pions PJaune[], pions PBlanc[]){
@@ -1735,8 +1742,11 @@ if(anti_triche==0){
 if(anti_triche==0){
     printf("taper 9 pour changer de pions\n");
 }
-if(deplacement_impossible[0]==1 && deplacement_impossible[1]==1&& deplacement_impossible[2]==1&& deplacement_impossible[3]==1&&deplacement_impossible[4]==1 &&deplacement_impossible[5]==1){
+if(anti_triche == 0 && deplacement_impossible[0]==1 && deplacement_impossible[1]==1&& deplacement_impossible[2]==1&& deplacement_impossible[3]==1&&deplacement_impossible[4]==1 &&deplacement_impossible[5]==1){
+    system("cls");
+    Couleur (4, 11);
     printf("\n\n\nVous ne pouvez effectuer aucun deplacement avec ce pion. Veuillez en choisir un autre\n\n");
+    Couleur (7, 0);
     direction=9;
 }else{
     printf("Taper 0 lorsque vous avez finis de jouer\n");
@@ -1746,7 +1756,10 @@ if(deplacement_impossible[0]==1 && deplacement_impossible[1]==1&& deplacement_im
 switch(direction){
 case 1 :
     if(deplacement_impossible[0]==1){
+        system("cls");
+        Couleur(4, 11);
         printf("Vous ne pouvez pas effectuer ce deplacement\n");
+        Couleur(7, 0);
     }else if(rebond_H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
         pion_a_deplacer[numero_pion].Coord_x-=2;
         pion_a_deplacer[numero_pion].Coord_y-=2;
@@ -1760,7 +1773,10 @@ case 1 :
 
 case 2 :
     if(deplacement_impossible[1]==1){
+        system("cls");
+        Couleur(4, 11);
         printf("Vous ne pouvez pas effectuer ce deplacement\n");
+        Couleur(7, 0);
     }else if(rebond_H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && H_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
         pion_a_deplacer[numero_pion].Coord_x+=2;
         pion_a_deplacer[numero_pion].Coord_y-=2;
@@ -1772,7 +1788,10 @@ case 2 :
 
 case 3 :
     if(deplacement_impossible[2]==1){
+        system("cls");
+        Couleur(4, 11);
         printf("Vous ne pouvez pas effectuer ce deplacement\n");
+        Couleur (7, 0);
     }else if(rebond_B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
         pion_a_deplacer[numero_pion].Coord_x+=2;
         pion_a_deplacer[numero_pion].Coord_y+=2;
@@ -1785,7 +1804,10 @@ case 3 :
     break;
 case 4 :
     if(deplacement_impossible[3]==1){
+        system("cls");
+        Couleur(4, 11);
         printf("Vous ne pouvez pas effectuer ce deplacement\n");
+        Couleur (7, 0);
     }else if(rebond_B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0 && B_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0){
         pion_a_deplacer[numero_pion].Coord_x-=2;
         pion_a_deplacer[numero_pion].Coord_y+=2;
@@ -1799,7 +1821,10 @@ case 4 :
 case 5 :
     
     if(deplacement_impossible[4]==1){
+        system("cls");
+        Couleur (4, 11);
         printf("Vous ne pouvez pas effectuer ce deplacement\n");
+        Couleur(7, 0);
     }else if(D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0 && rebond_D(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)!=0){
         pion_a_deplacer[numero_pion].Coord_x+=4;
         anti_triche=1;
@@ -1813,7 +1838,10 @@ case 5 :
 case 6 :
     
     if(deplacement_impossible[5]==1){
+        system("cls");
+        Couleur (4, 11);
         printf("Vous ne pouvez pas effectuer ce deplacement\n");
+        Couleur(7, 0);
     }else if(G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion)!=0 && rebond_G(PBleu,PRouge,PJaune,PNoir,PVert,PBlanc,pion_a_deplacer,numero_pion,sortie_p,cases_en_dehors_du_jeu)){
         pion_a_deplacer[numero_pion].Coord_x-=4;
         anti_triche=1;
@@ -1827,7 +1855,10 @@ case 9 :
     if(anti_triche==0){
     changement_pion=1;
     }else
-    printf("Vous ne pouvez pas chnager de pion apres les avoir deplacer\n");
+    system("cls");
+    Couleur (4, 11);
+    printf("Vous ne pouvez pas changer de pion apres les avoir deplacer\n");
+    Couleur(7, 0);
     break;
     
 case 0 :
@@ -1835,7 +1866,10 @@ case 0 :
     break;
 
 default :
+        system("cls");
+        Couleur (4, 11);
     	printf("Ce numero ne correspond a aucun deplacement\n");
+        Couleur(7, 0);
 }
 }
 }
@@ -1866,3 +1900,5 @@ do{
  }while(win!=1);
  Sauvegarde_Enregistrement(PBleu,PVert,PRouge,PNoir,PBlanc,PJaune);
 }
+
+// save a peut pres fonctionelle
